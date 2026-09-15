@@ -13,6 +13,11 @@ const GB = 1024 * 1024 * 1024
 
 export const PREDEFINED_OLLAMA_MODELS: PredefinedOllamaModel[] = [
   {
+    name: 'qwen3:8b',
+    id: 'qwen3:8b',
+    size: 4.87 * GB,
+  },
+  {
     name: 'deepseek-r1:7b',
     id: 'deepseek-r1:7b',
     size: 4.36 * GB,
@@ -26,11 +31,6 @@ export const PREDEFINED_OLLAMA_MODELS: PredefinedOllamaModel[] = [
     name: 'qwen3:4b',
     id: 'qwen3:4b',
     size: 2.33 * GB,
-  },
-  {
-    name: 'qwen3:8b',
-    id: 'qwen3:8b',
-    size: 4.87 * GB,
   },
   {
     name: 'qwen3:14b',

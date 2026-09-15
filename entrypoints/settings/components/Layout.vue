@@ -3,10 +3,9 @@
 import { useAsyncState } from '@vueuse/core'
 import { RouterView } from 'vue-router'
 
-import IconGithub from '@/assets/icons/logo-github.svg?component'
 import Logo from '@/components/Logo.vue'
 import Button from '@/components/ui/Button.vue'
-import { FEEDBACK_EMAIL, TECHIEMIND_HOMEPAGE_URL, TECHIEMIND_REPOSITORY_URL } from '@/utils/constants'
+import { TECHIEMIND_HOMEPAGE_URL } from '@/utils/constants'
 import { useI18n } from '@/utils/i18n'
 import { getUserConfig } from '@/utils/user-config'
 
@@ -52,18 +51,6 @@ const onClickTitle = () => {
         </div>
         <div class="flex gap-3 items-stretch min-h-7">
           <a
-            :href="TECHIEMIND_REPOSITORY_URL"
-            target="_blank"
-          >
-            <Button
-              class="px-2 flex items-center gap-2 h-full"
-              variant="secondary"
-            >
-              <IconGithub />
-              {{ t('settings.header.starts_on_github') }}
-            </Button>
-          </a>
-          <a
             :href="`${TECHIEMIND_HOMEPAGE_URL}?utm_source=extension-settings`"
             target="_blank"
           >
@@ -89,42 +76,6 @@ const onClickTitle = () => {
               <component :is="Component" />
             </Suspense>
           </RouterView>
-          <div class="font-light text-xs text-text-tertiary flex flex-col gap-1 py-4">
-            <i18n-t
-              keypath="settings.feedback.contact_msg"
-              tag="div"
-            >
-              <template #discord>
-                <a
-                  href="https://discord.com/invite/cx5n4Jzs57"
-                  target="_blank"
-                  class="underline"
-                >{{ t('settings.feedback.discord') }}</a>
-              </template>
-              <template #email>
-                <a
-                  :href="`mailto:${FEEDBACK_EMAIL}`"
-                  class="underline"
-                >
-                  {{ FEEDBACK_EMAIL }}
-                </a>
-              </template>
-            </i18n-t>
-            <i18n-t
-              keypath="settings.feedback.join_waitlist"
-              tag="div"
-            >
-              <template #join_waitlist_link>
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSf-U7Bur7670tnKnxUcO-7T1GsP-6YlaEeA3EA0fE9T3XQfAQ/viewform"
-                  target="_blank"
-                  class="underline"
-                >
-                  {{ t('settings.feedback.join_waitlist_link') }}
-                </a>
-              </template>
-            </i18n-t>
-          </div>
         </div>
       </div>
     </div>

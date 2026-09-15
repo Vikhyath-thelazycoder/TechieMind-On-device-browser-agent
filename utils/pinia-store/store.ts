@@ -183,7 +183,8 @@ export const useLLMBackendStatusStore = defineStore('llm-backend-status', () => 
         const ollamaModelList = await updateOllamaModelList()
         if (!ollamaModelList.some((model) => model.model === commonModelConfig.get())) {
           if (ollamaModelList.length) {
-            commonModelConfig.set(ollamaModelList[0]?.model)
+            const preferredModel = ollamaModelList.find((m) => m.model === 'qwen3:8b')
+            commonModelConfig.set(preferredModel ? preferredModel.model : ollamaModelList[0]?.model)
             status = 'ok'
           }
           else { status = 'no-model' }
@@ -197,7 +198,8 @@ export const useLLMBackendStatusStore = defineStore('llm-backend-status', () => 
         const lmStudioModelList = await updateLMStudioModelList()
         if (!lmStudioModelList.some((model) => model.modelKey === commonModelConfig.get())) {
           if (lmStudioModelList.length) {
-            commonModelConfig.set(lmStudioModelList[0]?.modelKey)
+            const preferredModel = lmStudioModelList.find((m) => m.modelKey === 'lmstudio-community/Qwen3-8B')
+            commonModelConfig.set(preferredModel ? preferredModel.modelKey : lmStudioModelList[0]?.modelKey)
             status = 'ok'
           }
           else { status = 'no-model' }

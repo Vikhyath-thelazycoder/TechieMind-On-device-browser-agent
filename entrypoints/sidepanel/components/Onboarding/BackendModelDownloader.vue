@@ -166,6 +166,6 @@ const searchUrl = computed(() => {
   else if (props.endpointType === 'lm-studio') return LM_STUDIO_SEARCH_URL
   else return ''
 })
-const selectedModel = ref<string>()
+const selectedModel = ref<string>(props.endpointType === 'ollama' ? 'qwen3:8b' : 'lmstudio-community/Qwen3-8B')
 const modelToDownload = ref<string>()
 </script>

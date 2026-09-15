@@ -65,9 +65,9 @@ TechieMind connects locally to [Ollama](https://ollama.com):
 
 ```bash
 # Pull your preferred local model
-ollama run gemma3:4b
+ollama run qwen3:8b
 # or
-ollama run qwen2.5:7b
+ollama run deepseek-r1:7b
 ```
 
 ### 2. Load the Extension
