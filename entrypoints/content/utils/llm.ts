@@ -1,0 +1,163 @@
+// Repository: https://github.com/Vikhyath-thelazycoder/TechieMind-On-device-browser-agent
+
+import type { InitProgressReport } from '@mlc-ai/web-llm'
+import { ObjectStreamPart, TextStreamPart, ToolSet } from 'ai'
+import type { ProgressResponse } from 'ollama/browser'
+import { browser } from 'wxt/browser'
+import { z } from 'zod'
+
+import { readPortMessageIntoIterator, toAsyncIter } from '@/utils/async'
+import { AbortError, fromError, ModelRequestTimeoutError } from '@/utils/error'
+import { BackgroundAliveKeeper } from '@/utils/keepalive'
+import { SchemaName, Schemas } from '@/utils/llm/output-schema'
+import { getReasoningOptionForModel } from '@/utils/llm/reasoning'
+import { WebLLMSupportedModel } from '@/utils/llm/web-llm'
+import logger from '@/utils/logger'
+import { c2bRpc } from '@/utils/rpc'
+import { getUserConfig } from '@/utils/user-config'
+
+const log = logger.child('llm')
+
+interface ExtraOptions {
+  abortSignal?: AbortSignal
+  timeout?: number
+  autoThinking?: boolean
+}
+
+export async function* streamTextInBackground(options: Parameters<typeof c2bRpc.streamText>[0] & ExtraOptions) {
+  const userConfig = await getUserConfig()
+  const defaultFirstTokenTimeout = userConfig.llm.defaultFirstTokenTimeout.get()
+  const { abortSignal, timeout = defaultFirstTokenTimeout, ...restOptions } = options
+  const modelId = userConfig.llm.model.get()
+  const reasoningPreference = userConfig.llm.reasoning.get()
+  const computedReasoning = restOptions.autoThinking
+    ? restOptions.reasoning
+    : (restOptions.reasoning ?? getReasoningOptionForModel(reasoningPreference, modelId))
+  const requestOptions = {
+    ...restOptions,
+    ...(computedReasoning !== undefined ? { reasoning: computedReasoning } : {}),
+  }
+  const { portName } = await c2bRpc.streamText(requestOptions)
+  const aliveKeeper = new BackgroundAliveKeeper()
+  const port = browser.runtime.connect({ name: portName })
+  abortSignal?.addEventListener('abort', () => {
+    aliveKeeper.dispose()
+    port.disconnect()
+  })
+  const iter = readPortMessageIntoIterator<TextStreamPart<ToolSet>>(port, { abortSignal, firstDataTimeout: timeout, onTimeout: () => port.disconnect() })
+  yield* iter
+}
+
+export async function* streamObjectInBackground<S extends SchemaName>(options: Parameters<typeof c2bRpc.streamObjectFromSchema<S>>[0] & ExtraOptions) {
+  const userConfig = await getUserConfig()
+  const defaultFirstTokenTimeout = userConfig.llm.defaultFirstTokenTimeout.get()
+  const { abortSignal, timeout = defaultFirstTokenTimeout, ...restOptions } = options
+  const modelId = userConfig.llm.model.get()
+  const reasoningPreference = userConfig.llm.reasoning.get()
+  const computedReasoning = restOptions.autoThinking
+    ? restOptions.reasoning
+    : (restOptions.reasoning ?? getReasoningOptionForModel(reasoningPreference, modelId))
+  const requestOptions = {
+    ...restOptions,
+    ...(computedReasoning !== undefined ? { reasoning: computedReasoning } : {}),
+  }
+  const { portName } = await c2bRpc.streamObjectFromSchema(requestOptions)
+  const aliveKeeper = new BackgroundAliveKeeper()
+  const port = browser.runtime.connect({ name: portName })
+  port.onDisconnect.addListener(() => aliveKeeper.dispose())
+  abortSignal?.addEventListener('abort', () => {
+    aliveKeeper.dispose()
+    port.disconnect()
+  })
+  const iter = readPortMessageIntoIterator<ObjectStreamPart<z.infer<Schemas[S]>>>(port, { abortSignal, firstDataTimeout: timeout, onTimeout: () => port.disconnect() })
+  yield* iter
+}
+
+export async function generateObjectInBackground<S extends SchemaName>(options: Parameters<typeof c2bRpc.generateObjectFromSchema<S>>[0] & ExtraOptions) {
+  const userConfig = await getUserConfig()
+  const defaultFirstTokenTimeout = userConfig.llm.defaultFirstTokenTimeout.get()
+  const { promise: abortPromise, resolve, reject } = Promise.withResolvers<Awaited<ReturnType<typeof c2bRpc.generateObjectFromSchema<S>>>>()
+  const { abortSignal, timeout = defaultFirstTokenTimeout, ...restOptions } = options
+  const modelId = userConfig.llm.model.get()
+  const reasoningPreference = userConfig.llm.reasoning.get()
+  const computedReasoning = restOptions.autoThinking
+    ? restOptions.reasoning
+    : (restOptions.reasoning ?? getReasoningOptionForModel(reasoningPreference, modelId))
+  const requestOptions = {
+    ...restOptions,
+    ...(computedReasoning !== undefined ? { reasoning: computedReasoning } : {}),
+  }
+  const aliveKeeper = new BackgroundAliveKeeper()
+  abortSignal?.addEventListener('abort', () => {
+    log.debug('generate object request aborted')
+    aliveKeeper.dispose()
+    reject(new AbortError('Aborted'))
+  })
+  const timeoutTimer = setTimeout(() => {
+    log.warn('generate object request timeout', requestOptions)
+    reject(new ModelRequestTimeoutError())
+  }, timeout)
+  const promise = await c2bRpc
+    .generateObjectFromSchema({
+      ...requestOptions,
+    })
+    .then((result) => {
+      clearTimeout(timeoutTimer)
+      log.debug('generate object result', result)
+      resolve(result)
+      return result
+    }).catch((error) => {
+      throw fromError(error)
+    }).finally(() => {
+      aliveKeeper.dispose()
+    })
+  return await Promise.race([abortPromise, promise])
+}
+
+export async function deleteOllamaModel(modelId: string) {
+  await c2bRpc.deleteOllamaModel(modelId)
+}
+
+export async function* pullOllamaModel(modelId: string, abortSignal?: AbortSignal) {
+  const { portName } = await c2bRpc.pullOllamaModel(modelId)
+  const aliveKeeper = new BackgroundAliveKeeper()
+  const port = browser.runtime.connect({ name: portName })
+  port.onDisconnect.addListener(() => aliveKeeper.dispose())
+  abortSignal?.addEventListener('abort', () => {
+    port.disconnect()
+  })
+  const iter = readPortMessageIntoIterator<ProgressResponse>(port, { abortSignal })
+  yield* iter
+}
+
+export async function* initWebLLMEngine(model: WebLLMSupportedModel) {
+  const { portName } = await c2bRpc.initWebLLMEngine(model)
+  const port = browser.runtime.connect({ name: portName })
+  const iter = toAsyncIter<{ type: 'progress', progress: InitProgressReport } | { type: 'ready' }>((yieldData, done) => {
+    port.onMessage.addListener((message) => {
+      if (message.type === 'progress') {
+        yieldData(message)
+      }
+      else if (message.type === 'ready') {
+        done()
+      }
+    })
+    port.onDisconnect.addListener(() => {
+      done()
+    })
+  })
+  yield* iter
+}
+
+export function checkModelReady(modeId: string) {
+  return c2bRpc.checkModelReady(modeId)
+}
+
+export async function* initCurrentModel(abortSignal?: AbortSignal) {
+  const portName = await c2bRpc.initCurrentModel()
+  if (portName) {
+    const port = browser.runtime.connect({ name: portName })
+    const iter = readPortMessageIntoIterator<{ type: 'progress', progress: InitProgressReport } | { type: 'ready' }>(port, { abortSignal })
+    yield* iter
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "chat": {
+    "messages": {
+      "thought_for_seconds": "{second}초 동안 생각 중 | {second}초 동안 생각 중",
+      "thinking": "생각하는 중...",
+      "reading": "읽는 중",
+      "search_locally": "브라우저에서 검색 중...",
+      "used_model": "{model} 사용"
+    },
+    "quick_actions": {
+      "title": "빠른 액션"
+    },
+    "thinking_mode": {
+      "label": "사고",
+      "low": "낮음",
+      "medium": "중간",
+      "high": "높음"
+    },
+    "input": {
+      "placeholder": {
+        "ask_anything": "무엇이든 물어보세요...",
+        "ask_follow_up": "추가 질문하기..."
+      },
+      "attachment_selector": {
+        "all_tabs": "모든 열린 탭",
+        "upload_from_computer": "내 컴퓨터에서 업로드",
+        "image_oversize": "이미지 크기는 {size}보다 작아야 합니다",
+        "too_many_images": "최대 {max}개의 이미지 파일이 허용됩니다",
+        "unsupported_image_type": "지원되지 않는 이미지 형식입니다. JPEG 또는 PNG 파일을 업로드해 주세요.",
+        "unsupported_model": "이미지 업로드에는 비전 기능이 있는 모델이 필요합니다. Gemma3 또는 유사한 비전 모델로 전환해 주세요.",
+        "pdf_oversize": "PDF 파일 크기는 {size}보다 작아야 합니다",
+        "pdf_text_extract_error": "PDF에서 텍스트 추출에 실패했습니다 - 이 PDF는 스캔되었거나 이미지 기반일 수 있습니다.",
+        "too_many_pdfs": "최대 {max}개의 PDF 파일이 허용됩니다",
+        "pdf_page_count_exceeded": "PDF는 {max}페이지 미만이어야 합니다",
+        "only_load_partial_pages": "파일 크기로 인해 처음 {max}페이지만 로드됩니다",
+        "selected_text_prefix": "선택된 텍스트:",
+        "captured_page_prefix": "캡처된 페이지:"
+      }
+    },
+    "prompt": {
+      "highlight_key_insights": {
+        "title": "핵심 인사이트 강조"
+      },
+      "search_more": {
+        "title": "이와 같은 콘텐츠를 더 검색하세요"
+      },
+      "summarize_page_content": {
+        "title": "페이지 요약"
+      }
+    },
+    "tool_calls": {
+      "common": {
+        "reading": "읽는 중：",
+        "read_failed": "읽기 실패：{error}",
+        "reading_success": "읽기 완료："
+      },
+      "search_online": {
+        "searching": "검색 중: \"{query}\"...",
+        "search_completed": "검색 완료: \"{query}\"",
+        "search_failed": "검색 실패: {query}"
+      },
+      "fetch_page": {
+        "error_no_content": "콘텐츠를 찾을 수 없습니다"
+      },
+      "view_image": {
+        "analyzing": "분석 중: {title}",
+        "analyze_failed": "분석 실패: {error}",
+        "analyze_success": "분석 완료: {title}",
+        "image_not_found": "이미지를 찾을 수 없습니다"
+      },
+      "view_pdf": {
+        "pdf_not_found": "PDF를 찾을 수 없습니다"
+      },
+      "view_tab": {
+        "tab_not_found": "탭을 찾을 수 없음"
+      },
+      "page_click": {
+        "click": "{content}을(를) 클릭하세요",
+        "error_can_not_click": "{destination}을(를) 클릭하여 이동할 수 없습니다",
+        "error_no_active_tab": "활성 탭을 찾을 수 없습니다",
+        "redirected": "{destination}로 리디렉션됨",
+        "error_unable_to_jump": "{destination}을(를) 클릭하여 이동할 수 없습니다",
+        "error_click_before_view_tab": "페이지를 보기 전에 페이지 링크를 클릭해 보세요",
+        "error_click_incorrect_link": "잘못된 페이지 링크를 클릭해 보세요"
+      }
+    },
+    "tools": {
+      "online_search": {
+        "title": "검색"
+      }
+    },
+    "camera": {
+      "permission_reload_title": "다시 로드 필요",
+      "permission_reload_description": "권한을 부여한 후 Firefox에서 TechieMind 확장 프로그램을 다시 활성화하여 스크린샷 기능을 활성화하세요.",
+      "reload_extension": "확장 프로그램 다시 로드"
+    }
+  },
+  "chat_history": {
+    "delete_confirm": "이 대화를 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.",
+    "delete": "삭제",
+    "rename": "이름 바꾸기",
+    "unpin": "고정 해제",
+    "pin": "고정",
+    "title": "채팅 기록",
+    "pinned_section": "고정된 채팅",
+    "recent_section": "최근 채팅",
+    "empty_state": "아직 대화가 없습니다",
+    "untitled_chat": "제목 없는 채팅",
+    "new_chat": "새 채팅",
+    "save": "저장",
+    "cancel": "취소"
+  },
+  "onboarding": {
+    "banner": {
+      "description": "사용자의 기기에서만 실행되는 강력한 기능으로 개인 정보를 보호하고 안전합니다.",
+      "title": "사용자를 위해 만들어진 온디바이스 AI"
+    },
+    "guide": {
+      "already_installed": "이미 Ollama를 설치하고 실행 중인가요?",
+      "features": {
+        "1": "고급 모델들인 gpt-oss, DeepSeek, Qwen, Llama를 실행하세요",
+        "2": "모델을 완전히 제어하여 사용자 지정하고 전환할 수 있습니다",
+        "3": "사용자의 데이터는 기기에서 안전하게 유지됩니다"
+      },
+      "follow_our_tutorial": "설치 가이드를 확인하세요",
+      "install_desc": "Ollama를 설치하여 로컬 AI를 설정하세요.",
+      "need_help": "도움이 필요하세요?",
+      "setup": "설정",
+      "step1": "1단계",
+      "download_model_to_begin": "시작하려면 모델을 다운로드하세요.",
+      "select_model_to_start": "시작하려면 모델을 선택하고 다운로드하세요",
+      "download_and_install": "다운로드 & 설치",
+      "choose_model": "모델 선택",
+      "no_sure_which_one": "🤔 어떤 것을 선택해야 할지 확실하지 않나요?",
+      "learn_about_models": "모델에 대해 알아보기",
+      "looking_for_more_options": "🔍 더 많은 옵션을 찾고 계신가요?",
+      "browse_more_models": "더 많은 모델 둘러보기",
+      "get_endpoint": "{endpointType} 가져오기",
+      "ollama_select_desc": "전문 개발자 도구",
+      "lm_studio_select_desc": "사용하기 쉬운 데스크톱 앱",
+      "unlock_full_power_with": "{endpointType}로 완전한 로컬 AI 성능을 잠금 해제하세요."
+    },
+    "webllm_tutorial": {
+      "desc": "브라우저에서 바로 경량 모델(Qwen 0.6B)을 사용해 보세요. 설정 없이 바로 시작할 수 있습니다.",
+      "not_support_webllm": "WebLLM은 이 기기에서 지원되지 않습니다",
+      "start_with_webllm": "웹 모델로 시작하기",
+      "title": "설치할 준비가 안 되셨나요? \n지금 바로 시작해 보세요."
+    },
+    "welcome_msg": {
+      "title": "👋 **TechieMind**에 오신 것을 환영합니다",
+      "body": "TechieMind는 완전히 기기에서 실행되어 모든 채팅을 비공개로 안전하게 유지합니다.\n\n다음과 같은 작업을 수행할 수 있습니다:\n- 탭을 넘나들며 채팅하고 탐색하는 동안 컨텍스트를 유지합니다.\n- 모든 웹페이지를 로컬에서 요약, 검색 및 번역합니다.\n- 작성, 연구 또는 심층 분석을 위해 스마트 에이전트를 사용합니다.\n- PDF 또는 이미지를 업로드하여 기기에서 즉시 이해합니다.\n\n아래의 빠른 작업을 시도하여 시작할 수 있습니다."
+    },
+    "ollama_is_running": "Ollama가 실행 중입니다",
+    "backend_is_running": "{endpointType}이(가) 실행 중입니다"
+  },
+  "settings": {
+    "cache": {
+      "title": "번역 캐시",
+      "enable": "캐시 활성화",
+      "enabled": "활성화됨",
+      "disabled": "비활성화됨",
+      "max_size": "최대 크기",
+      "retention_days": "보존 기간",
+      "days": "일"
+    },
+    "advanced": {
+      "title": "고급 설정"
+    },
+    "choose_model": "모델 선택",
+    "download": "다운로드",
+    "feedback": {
+      "contact_msg": "📧 질문이나 피드백이 있으신가요? {discord}에 가입하거나 {email}로 이메일을 보내주세요.",
+      "join_waitlist": "💼 직장에서 사용하고 싶으신가요? 기업용 업데이트를 위해 {join_waitlist_link}하세요.",
+      "join_waitlist_link": "대기자 명단 가입하기",
+      "discord": "Discord"
+    },
+    "get_ollama": "Ollama 얻기",
+    "models": {
+      "title": "모델",
+      "discover_more": "더 많은 모델 살펴보기",
+      "no_model": "⚠️ 모델 없음",
+      "add_model_to_start": "모델을 추가하여 시작하세요",
+      "lmstudio_models": "LM Studio 모델 ({count})",
+      "ollama_models": "Ollama 모델 ({count})"
+    },
+    "ollama": {
+      "already_installed": "이미 Ollama를 설치하고 실행 중인가요?",
+      "connected": "연결됨",
+      "connection_error": "연결 오류",
+      "downloadable_model": "다운로드 가능한 모델",
+      "follow_guide": "설치 가이드를 확인하세요",
+      "learn_more_about_models": "모델에 대해 더 알아보기",
+      "need_help": "도움이 필요하세요?",
+      "re_scan": "다시 스캔하기",
+      "server_address": "서버 주소",
+      "setup": "설정",
+      "unconnected": "연결되지 않음",
+      "context_window_size": "컨텍스트 윈도우 크기",
+      "custom_context_window_size": "사용자 정의 컨텍스트 윈도우 크기",
+      "context_window_size_desc": "토큰 단위로 사용자 정의 컨텍스트 윈도우 크기를 입력하세요 (최소: 512)",
+      "server_address_desc": "Ollama 서버 API 엔드포인트",
+      "context_window_size_error": "컨텍스트 윈도우 크기는 최소 {min} 토큰이어야 합니다",
+      "unload": "내리다",
+      "expires_in": "{duration} 후 만료",
+      "running": "실행 중",
+      "running_models": "실행 중인 모델",
+      "downloaded_models": "다운로드된 모델",
+      "model_management": "모델 관리"
+    },
+    "prompts": {
+      "chat_system_prompt": "채팅 시스템 프롬프트",
+      "title": "프롬프트",
+      "translation_system_prompt": "번역 시스템 프롬프트"
+    },
+    "quick_actions": {
+      "description": "새 채팅이나 컨텍스트 메뉴에서 자주 사용하는 프롬프트를 더 빠르게 실행할 수 있도록 빠른 액션을 설정하세요.",
+      "edit": {
+        "cancel": "취소",
+        "prompt": "프롬프트",
+        "reset": "초기화",
+        "save": "저장",
+        "show_in_context_menu": "컨텍스트 메뉴에 표시",
+        "title": "제목"
+      },
+      "title": "빠른 액션 설정"
+    },
+    "test": "테스트",
+    "translation": {
+      "title": "번역 언어",
+      "description": "번역 기능 및 대상 언어 구성",
+      "basic_config": {
+        "target_language": "대상 언어",
+        "target_language_desc": "번역할 대상 언어를 선택하세요",
+        "title": "기본 구성",
+        "translation_model": "번역 모델",
+        "translation_model_desc": "번역 작업을 위한 AI 모델을 선택하세요",
+        "translation_system_prompt": "번역 시스템 프롬프트",
+        "translation_system_prompt_desc": "AI 번역 중 행동과 출력 형식 정의",
+        "translation_system_prompt_error": "시스템 프롬프트는 반드시 {'{{LANGUAGE}}'}를 포함해야 합니다"
+      }
+    },
+    "webllm-desc": "지금 빠른 체험을 위해 WebLLM: qwen3:0.6b를 사용하고 있습니다. 전체 모델 지원과 더 나은 성능을 위해서는 Ollama를 설치해 주세요.",
+    "general": {
+      "system_language": "시스템 언어",
+      "title": "일반",
+      "description": "기본 설정 및 서버 연결 구성",
+      "discover_more_models": "더 많은 모델 살펴보기",
+      "refresh_status": "상태 새로고침",
+      "unload_model_confirm": "모델 \"{model}\"을 언로드하시겠습니까?",
+      "running_models": {
+        "vram": "{size} VRAM",
+        "params": "{size} 매개변수",
+        "quant": "{level} 퀀트",
+        "thinking": "사고",
+        "no_active_models": "Ollama가 연결되었지만 활성화된 모델이 없습니다",
+        "not_connected_to_ollama": "Ollama에 연결되지 않음",
+        "not_connected_to_lm_studio": "Ollama에 연결되지 않음",
+        "lm_studio_no_active_models": "LM Studio가 연결되었지만 활성화된 모델이 없습니다"
+      },
+      "delete_model_confirm": "모델 \"{model}\"을(를) 삭제하시겠습니까?"
+    },
+    "title": "설정",
+    "model_downloader": {
+      "description": "이 모델은 사용하기 전에 다운로드해야 합니다. 다운로드에 몇 분이 소요될 수 있습니다.",
+      "downloading_model": "\"{model}\" 다운로드 중",
+      "download_model": "\"{model}\" 다운로드",
+      "downloading": "모델을 다운로드하고 있습니다. 잠시만 기다려 주세요…",
+      "download": "다운로드",
+      "retry": "다시 시도",
+      "unable_to_download": "다운로드를 시작할 수 없음",
+      "could_not_connect": "{endpointType}에 연결할 수 없습니다. {endpointType}이 실행 중인지 확인하고 다시 시도해 주세요."
+    },
+    "webllm_downloader": {
+      "description": "로컬 모드를 사용하려면 {model} 모델({size})을 다운로드해야 합니다. 지금 다운로드하시겠습니까?"
+    },
+    "writing_tools": {
+      "title": "글쓰기 도구",
+      "basic_config": {
+        "enable": "쓰기 도구 활성화",
+        "enable_desc": "텍스트가 선택되었을 때 작성 도움 옵션 표시",
+        "title": "기본 설정"
+      },
+      "description": "다양한 작성 지원 기능 구성",
+      "tool_config": {
+        "at_least_one_tool_error": "최소 하나의 작성 도구를 선택해야 합니다.",
+        "list": {
+          "description": "콘텐츠를 명확하고 체계적인 목록으로 변환하세요",
+          "title": "목록"
+        },
+        "proofread": {
+          "description": "문법, 맞춤법 및 구두점 오류를 확인하세요",
+          "title": "교정하다"
+        },
+        "rewrite": {
+          "description": "텍스트의 명확성과 흐름 개선",
+          "title": "다시 쓰기"
+        },
+        "sparkle": {
+          "description": "이모지와 시각적 요소 추가",
+          "title": "미화"
+        },
+        "title": "도구 구성"
+      }
+    },
+    "chat": {
+      "title": "채팅",
+      "description": "채팅 기능 및 빠른 작업 구성",
+      "basic_config": {
+        "title": "기본 구성",
+        "chat_model": "채팅 모델",
+        "chat_model_description": "채팅 대화를 위한 AI 모델을 선택하세요",
+        "chat_system_prompt": "채팅 시스템 프롬프트",
+        "chat_system_prompt_description": "채팅 대화 중 AI의 행동과 역할을 정의하세요",
+        "thinking_visibility": "사고 과정 표시",
+        "thinking_visibility_description": "LLM 추론 중 사고 과정 표시 방법 선택",
+        "thinking_visibility_hide": "사고 과정 숨기기",
+        "thinking_visibility_hide_description": "로딩과 최종 답변만 표시",
+        "thinking_visibility_preview": "사고 과정 미리보기",
+        "thinking_visibility_preview_description": "마지막 2줄 표시, 확장 가능",
+        "thinking_visibility_full": "전체 사고 과정 표시",
+        "thinking_visibility_full_description": "기본적으로 모두 표시, 접을 수 있음"
+      },
+      "quick_actions": {
+        "title": "빠른 작업",
+        "reset_to_default": "기본값으로 재설정",
+        "reset_to_default_confirm": "빠른 작업을 기본값으로 재설정하시겠습니까?"
+      }
+    },
+    "common": {
+      "saved": "저장됨"
+    },
+    "interface": {
+      "title": "인터페이스",
+      "interface_language": "인터페이스 언어",
+      "theme": "테마",
+      "theme_light": "라이트",
+      "theme_dark": "다크",
+      "theme_system": "시스템"
+    },
+    "header": {
+      "starts_on_github": "GitHub에서 별점 주기",
+      "goto_website": "웹사이트로 이동"
+    },
+    "providers": {
+      "lm_studio": {
+        "title": "LM Studio 구성",
+        "already_installed": "이미 LM Studio를 설치하고 실행했나요?",
+        "model_management_desc": "모델 다운로드, 로딩, 삭제는 LM Studio 데스크톱 앱에서 수행해야 합니다. 여기서는 현재 실행 상태만 표시됩니다."
+      },
+      "ollama": {
+        "title": "Ollama 구성"
+      }
+    },
+    "delete": "삭제",
+    "get_lm_studio": "LM Studio 다운로드",
+    "lm_studio": {
+      "server_address": "서버 주소",
+      "server_address_desc": "LM Studio 서버 API 엔드포인트"
+    },
+    "webllm_desc_lm_studio": "지금 빠른 체험을 위해 WebLLM: qwen3:0.6b를 사용하고 있습니다. 전체 모델 지원과 더 나은 성능을 위해서는 LM Studio를 설치해 주세요.",
+    "gmail_tools": {
+      "title": "Gmail 도구",
+      "description": "다양한 작성 지원 기능을 설정",
+      "basic_config": {
+        "title": "기본 설정",
+        "enable": "Gmail 도구 활성화",
+        "enable_desc": "Gmail 내에서 AI 지원 기능을 직접 표시합니다.",
+        "output_language": "출력 언어",
+        "output_language_desc": "AI 생성 이메일의 기본 언어를 선택하세요.",
+        "output_style": "출력 스타일",
+        "output_style_desc": "이메일의 기본 톤을 선택하세요",
+        "options": {
+          "auto": "자동",
+          "default": "기본값"
+        }
+      },
+      "system_prompt": {
+        "title": "시스템 프롬프트",
+        "summarize": {
+          "title": "요약",
+          "description": "긴 이메일이나 전체 스레드에서 핵심 포인트를 빠르게 추출합니다."
+        },
+        "reply": {
+          "title": "답장",
+          "description": "이메일 내용과 메모를 바탕으로 자연스러운 답장을 즉시 작성합니다."
+        },
+        "compose": {
+          "title": "작성",
+          "description": "처음부터 시작하거나 초안을 다듬습니다."
+        },
+        "reset_to_default": "기본값으로 재설정",
+        "reset_to_default_confirm": "{setting}을(를) 기본값으로 재설정하시겠습니까?"
+      }
+    }
+  },
+  "context_menu": {
+    "quick_actions": {
+      "title": "빠른 액션"
+    },
+    "translation": {
+      "show_original": "원본 표시",
+      "translate_page_into": "이 페이지를 {language}로 번역하기",
+      "translate_selected_text": "선택된 텍스트 번역"
+    },
+    "add_image": {
+      "title": "채팅에 이미지 추가"
+    },
+    "settings": {
+      "title": "설정"
+    }
+  },
+  "errors": {
+    "model_not_found": "문제가 발생했습니다! 설정에서 Ollama 연결을 확인하고 다시 시도해 주세요.",
+    "model_request_error": "문제가 발생했습니다! 설정에서 Ollama 연결을 확인하고 다시 시도해 주세요.",
+    "model_request_timeout": "요청 시간이 초과되었습니다. Ollama 연결을 확인하거나, 긴 컨텍스트가 응답 시간에 영향을 미칠 수 있으므로 새 세션 시작을 고려해 주세요.",
+    "timeout_error": "작업 시간 초과: {message}",
+    "unknown_error": "예기치 않은 오류가 발생했습니다: {message}",
+    "webllm_not_supported": "WebLLM이 귀하의 기기에서 지원되지 않습니다.",
+    "max_characters_error": "최대 {count}자까지 입력 가능합니다"
+  },
+  "common": {
+    "cancel": "취소",
+    "duration": {
+      "days": "{day}일 | {day}일",
+      "seconds": "{second}초 | {second}초",
+      "minutes": "{minute}분 | {minute}분",
+      "hours": "{hour}시간 | {hour}시간",
+      "years": "{year}년 | {year}년",
+      "months": "{month}개월 | {month}개월"
+    },
+    "confirm": "확인",
+    "send": "보내기"
+  },
+  "ollama": {
+    "sites": {
+      "add_to_nativemind": "TechieMind에서 사용"
+    }
+  },
+  "popup": {
+    "reload_page": "페이지를 새로고침하여 TechieMind를 사용하세요.",
+    "page_not_supported": "이 페이지는 TechieMind에서 지원되지 않습니다.",
+    "local_pdf_file_not_supported": "브라우저 권한 제한으로 인해 컴퓨터의 로컬 파일에 직접 액세스할 수 없습니다. 다른 브라우저 탭에서 플러그인을 열고 로컬 PDF 파일을 수동으로 업로드해 주세요."
+  },
+  "writing_tools": {
+    "processing": "처리 중...",
+    "rewrite_suggestion": "다시 쓰기 제안",
+    "sparkle_text": "텍스트 미화",
+    "key_points": "주요 사항",
+    "grammar_and_style": "문법 및 문체",
+    "proofread": "교정하다",
+    "list": "목록",
+    "sparkle": "미화",
+    "rewrite": "다시 쓰기",
+    "apply": "적용",
+    "dismiss": "해제"
+  },
+  "textarea": {
+    "reset_to_default": "기본값으로 재설정"
+  },
+  "tooltips": {
+    "clear_chat": "채팅 지우기",
+    "settings": "설정",
+    "pin_sidebar": "고정",
+    "unpin_sidebar": "고정 해제",
+    "close": "닫기",
+    "chat_history": "역사",
+    "new_chat": "새로운 채팅",
+    "back": "뒤로",
+    "copy_message": "메시지 복사",
+    "edit_message": "메시지 수정",
+    "retry_message": "재시도"
+  },
+  "gmail_tools": {
+    "buttons": {
+      "ai_summary": "AI 요약",
+      "ai_reply": "AI 답장",
+      "ai_polish": "AI 다듬기"
+    },
+    "modals": {
+      "open_sidebar_title": "사이드바 열기 필요",
+      "open_sidebar_description": "이 기능을 사용하려면 TechieMind 사이드바를 수동으로 열어주세요.",
+      "confirm": "확인",
+      "close": "닫기"
+    },
+    "cards": {
+      "reply": {
+        "title": "답장 제안",
+        "processing": "처리 중...",
+        "regenerate": "재생성",
+        "apply": "적용",
+        "language_selector": "언어",
+        "style_selector": "스타일",
+        "copy_to_clipboard": "클립보드에 복사"
+      },
+      "compose": {
+        "title": "AI 작성",
+        "subject": "제목:",
+        "email_body": "이메일 본문:",
+        "processing": "처리 중...",
+        "regenerate": "재생성",
+        "apply": "적용",
+        "language_selector": "언어",
+        "style_selector": "스타일",
+        "copy_subject_to_clipboard": "제목을 클립보드에 복사",
+        "copy_body_to_clipboard": "본문을 클립보드에 복사",
+        "no_subject_generated": "제목이 생성되지 않음"
+      },
+      "styles": {
+        "change_style": "스타일 변경",
+        "formal": "공식적",
+        "friendly": "친근한",
+        "urgent": "긴급"
+      },
+      "notifications": {
+        "copied_to_clipboard": "클립보드에 복사되었습니다!",
+        "subject_copied": "제목이 클립보드에 복사되었습니다!",
+        "body_copied": "본문이 클립보드에 복사되었습니다!",
+        "reply_applied": "답장이 작성함에 적용되었습니다!",
+        "email_content_applied": "이메일 내용이 작성 필드에 적용되었습니다!",
+        "no_content_to_apply": "적용할 내용이 없습니다",
+        "no_compose_box_found": "작성함을 찾을 수 없습니다",
+        "failed_to_copy": "클립보드 복사에 실패했습니다",
+        "failed_to_apply_reply": "답장 내용 적용에 실패했습니다",
+        "failed_to_apply_compose": "작성 내용 적용에 실패했습니다"
+      },
+      "errors": {
+        "failed_to_summarize": "이메일 요약에 실패했습니다:",
+        "failed_to_show_reply_card": "Gmail 답장 카드 표시에 실패했습니다:",
+        "failed_to_show_compose_card": "Gmail 작성 카드 표시에 실패했습니다:",
+        "failed_to_locate_reply_element": "답장 작성 요소를 찾지 못했습니다",
+        "error_generating_reply": "답장 생성 오류: {error}",
+        "error_generating_compose": "작성 내용 생성 오류: {error}"
+      }
+    }
+  }
+}

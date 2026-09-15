@@ -1,0 +1,30 @@
+<!-- Repository: https://github.com/Vikhyath-thelazycoder/TechieMind-On-device-browser-agent -->
+<template>
+  <Selector
+    v-model="themeMode"
+    class="grow"
+    containerClass="w-full"
+    dropdownClass="text-xs text-text-primary w-52"
+    dropdownAlign="left"
+    :options="options"
+  />
+</template>
+
+<script setup lang="ts">
+
+import { computed } from 'vue'
+
+import { useTheme } from '@/composables/theme'
+import { useI18n } from '@/utils/i18n/index'
+
+import Selector from './Selector.vue'
+
+const { t } = useI18n()
+const { themeMode } = useTheme()
+
+const options = computed(() => [
+  { id: 'light' as const, label: t('settings.interface.theme_light') },
+  { id: 'dark' as const, label: t('settings.interface.theme_dark') },
+  { id: 'system' as const, label: t('settings.interface.theme_system') },
+])
+</script>

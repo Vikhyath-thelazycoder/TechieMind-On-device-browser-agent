@@ -1,0 +1,536 @@
+{
+  "chat": {
+    "messages": {
+      "thought_for_seconds": "思考了{second}秒 | 思考了{second}秒",
+      "thinking": "正在思考...",
+      "reading": "讀取中",
+      "search_locally": "在瀏覽器中本地搜尋…",
+      "used_model": "使用了 {model}"
+    },
+    "quick_actions": {
+      "title": "快捷操作"
+    },
+    "thinking_mode": {
+      "label": "推理",
+      "low": "低",
+      "medium": "中",
+      "high": "高"
+    },
+    "input": {
+      "placeholder": {
+        "ask_anything": "問些什麼...",
+        "ask_follow_up": "繼續提問..."
+      },
+      "attachment_selector": {
+        "all_tabs": "所有打開的分頁",
+        "upload_from_computer": "從我的電腦上傳",
+        "image_oversize": "圖片大小必須小於 {size}",
+        "too_many_images": "最多允許 {max} 個圖片檔案",
+        "unsupported_image_type": "不支援的圖片格式。請上傳 JPEG 或 PNG 檔案。",
+        "unsupported_model": "圖片上傳需要具備視覺能力的模型。請切換至 Gemma3 或類似的視覺模型。",
+        "pdf_oversize": "PDF 檔案大小必須小於 {size}",
+        "pdf_text_extract_error": "文字擷取失敗 - 此 PDF 可能是掃描檔或圖像格式。",
+        "too_many_pdfs": "最多允許 {max} 個 PDF 檔案",
+        "pdf_page_count_exceeded": "PDF 必須少於 {max} 頁",
+        "only_load_partial_pages": "由於檔案大小限制，僅載入前 {max} 頁",
+        "selected_text_prefix": "已選擇文字：",
+        "captured_page_prefix": "已擷取頁面："
+      }
+    },
+    "prompt": {
+      "highlight_key_insights": {
+        "title": "突出重點洞察"
+      },
+      "search_more": {
+        "title": "搜尋更多類似內容"
+      },
+      "summarize_page_content": {
+        "title": "總結頁面"
+      }
+    },
+    "tool_calls": {
+      "common": {
+        "reading": "讀取中",
+        "read_failed": "讀取失敗：{error}",
+        "reading_success": "讀取完成"
+      },
+      "search_online": {
+        "searching": "搜尋中：「{query}」...",
+        "search_completed": "搜尋完成：「{query}」",
+        "search_failed": "搜尋失敗：{query}"
+      },
+      "fetch_page": {
+        "error_no_content": "找不到內容"
+      },
+      "view_image": {
+        "analyzing": "分析中：{title}",
+        "analyze_failed": "分析失敗：{error}",
+        "analyze_success": "已完成分析：{title}",
+        "image_not_found": "找不到圖片"
+      },
+      "view_pdf": {
+        "pdf_not_found": "找不到 PDF"
+      },
+      "view_tab": {
+        "tab_not_found": "找不到分頁"
+      },
+      "page_click": {
+        "click": "點擊 {content}",
+        "error_can_not_click": "無法點擊並跳轉至 {destination}",
+        "error_no_active_tab": "找不到使用中的分頁",
+        "error_unable_to_jump": "無法點擊並跳轉至 {destination}",
+        "redirected": "重新導向至 {destination}",
+        "error_click_before_view_tab": "在查看任何頁面之前，請先嘗試點擊頁面連結",
+        "error_click_incorrect_link": "請嘗試點擊錯誤的頁面連結"
+      }
+    },
+    "tools": {
+      "online_search": {
+        "title": "搜尋"
+      }
+    },
+    "camera": {
+      "permission_reload_title": "需要重新載入",
+      "permission_reload_description": "授予權限後，請在 Firefox 中重新啟用 TechieMind 擴展以啟用截圖功能。",
+      "reload_extension": "重新載入擴展"
+    }
+  },
+  "chat_history": {
+    "delete_confirm": "您確定要刪除此對話嗎？此操作無法復原。",
+    "delete": "刪除",
+    "rename": "重命名",
+    "unpin": "取消固定",
+    "pin": "固定",
+    "title": "聊天紀錄",
+    "pinned_section": "已固定聊天",
+    "recent_section": "最近聊天",
+    "empty_state": "尚無對話",
+    "untitled_chat": "無標題聊天",
+    "new_chat": "新聊天",
+    "save": "儲存",
+    "cancel": "取消"
+  },
+  "onboarding": {
+    "banner": {
+      "description": "私人和安全，具有完全在裝置中執行的強大功能。",
+      "title": "裝置AI，專為您打造"
+    },
+    "guide": {
+      "already_installed": "已安裝並執行 {endpointType}？",
+      "features": {
+        "1": "執行進階模型，如 gpt-oss、DeepSeek、Qwen、Llama",
+        "2": "自訂和切換模型完全控制",
+        "3": "您的資料在裝置上保持私密"
+      },
+      "follow_our_tutorial": "參照我們的安裝指南",
+      "install_desc": "您想如何在本地運行 AI？",
+      "need_help": "需要幫助嗎？",
+      "setup": "設置",
+      "step1": "步驟1",
+      "download_model_to_begin": "下載模型以開始。",
+      "select_model_to_start": "選擇並下載模型以開始使用",
+      "download_and_install": "下載 & 安裝",
+      "choose_model": "選擇模型",
+      "no_sure_which_one": "🤔 不確定要選擇哪一個？",
+      "learn_about_models": "了解模型",
+      "looking_for_more_options": "🔍 尋找更多選項？",
+      "browse_more_models": "瀏覽更多模型",
+      "get_endpoint": "取得 {endpointType}",
+      "lm_studio_select_desc": "易於使用的桌面應用程式",
+      "ollama_select_desc": "專業開發者工具",
+      "unlock_full_power_with": "使用 {endpointType} 解鎖完整的本地 AI 功能。"
+    },
+    "webllm_tutorial": {
+      "desc": "在瀏覽器中使用輕巧的模型（QWEN 0.6B） - 無需設置，無需等待。",
+      "not_support_webllm": "您的裝置不支援Webllm",
+      "start_with_webllm": "從網路模型開始",
+      "title": "還沒有準備好安裝嗎？\n立即嘗試。"
+    },
+    "welcome_msg": {
+      "title": "👋歡迎來到 **TechieMind**",
+      "body": "TechieMind完全在您的裝置上執行,確保每次聊天都是私密且安全的。\n\n您可以執行以下操作:\n- 跨分頁聊天,瀏覽時保持上下文。\n- 在本地總結、搜尋和翻譯任何網頁。\n- 使用智慧代理進行寫作、研究或深度分析。\n- 上傳PDF或圖片以進行即時的裝置端理解。\n\n您可以從下方的快捷操作開始。"
+    },
+    "ollama_is_running": "Ollama 正在運行",
+    "backend_is_running": "{endpointType} 正在執行中"
+  },
+  "settings": {
+    "cache": {
+      "title": "翻譯快取",
+      "enable": "啟用快取",
+      "enabled": "已啟用",
+      "disabled": "已停用",
+      "max_size": "最大大小",
+      "retention_days": "保留期限",
+      "days": "天"
+    },
+    "advanced": {
+      "title": "進階"
+    },
+    "choose_model": "選擇模型",
+    "download": "下載",
+    "feedback": {
+      "contact_msg": "📧 有問題或反饋？加入我們的{discord}或透過{email}給我們發送電子郵件。",
+      "join_waitlist": "💼 想在工作中使用它嗎？{join_waitlist_link}獲取企業版更新。",
+      "join_waitlist_link": "加入等候名單",
+      "discord": "Discord"
+    },
+    "get_ollama": "獲取Ollama",
+    "models": {
+      "title": "模型",
+      "discover_more": "探索更多模型",
+      "no_model": "⚠️ 沒有模型",
+      "add_model_to_start": "新增模型以開始",
+      "ollama_models": "Ollama 模型 ({count})",
+      "lmstudio_models": "LM Studio 模型 ({count})"
+    },
+    "ollama": {
+      "already_installed": "已經安裝並執行Ollama？",
+      "connected": "已連線",
+      "connection_error": "連線錯誤",
+      "downloadable_model": "可下載的模型",
+      "follow_guide": "參照我們的安裝指南",
+      "learn_more_about_models": "了解有關模型的更多資訊",
+      "need_help": "需要幫助嗎？",
+      "re_scan": "重新掃描",
+      "server_address": "伺服器地址",
+      "setup": "設定",
+      "unconnected": "未連線",
+      "context_window_size": "上下文視窗大小",
+      "custom_context_window_size": "自訂上下文視窗大小",
+      "context_window_size_desc": "輸入自訂上下文視窗大小（以 token 為單位，最小值：512）",
+      "server_address_desc": "Ollama 伺服器 API 端點",
+      "context_window_size_error": "上下文視窗大小必須至少為 {min} 個標記",
+      "unload": "卸載",
+      "expires_in": "於 {duration} 後到期",
+      "running": "運行中",
+      "running_models": "運行中的模型",
+      "model_management": "模型管理",
+      "downloaded_models": "已下載的模型"
+    },
+    "prompts": {
+      "chat_system_prompt": "聊天系統提示詞",
+      "title": "提示詞",
+      "translation_system_prompt": "翻譯系統提示詞"
+    },
+    "quick_actions": {
+      "description": "設置快捷操作以更快地執行您喜歡的提示詞 - 從新建聊天或右鍵選單中。",
+      "edit": {
+        "cancel": "取消",
+        "prompt": "提示詞",
+        "reset": "重置",
+        "save": "儲存",
+        "show_in_context_menu": "在右鍵選單中顯示",
+        "title": "標題"
+      },
+      "title": "自定義快捷操作"
+    },
+    "test": "測試",
+    "translation": {
+      "title": "翻譯語言",
+      "description": "配置翻譯功能和目標語言",
+      "basic_config": {
+        "target_language": "目標語言",
+        "target_language_desc": "選擇翻譯的目標語言",
+        "title": "基本設定",
+        "translation_model": "翻譯模型",
+        "translation_model_desc": "選擇用於翻譯任務的AI模型",
+        "translation_system_prompt": "翻譯系統提示詞",
+        "translation_system_prompt_desc": "定義AI在翻譯過程中的行為和輸出格式",
+        "translation_system_prompt_error": "系統提示必須包含 {'{{LANGUAGE}}'}"
+      }
+    },
+    "webllm-desc": "您現在正在使用 WebLLM: qwen3:0.6b 進行快速試用。如需完整模型支援和更佳效能，請安裝 Ollama。",
+    "general": {
+      "system_language": "系統語言",
+      "title": "一般",
+      "description": "設定基本設定和伺服器連線",
+      "discover_more_models": "探索更多模型",
+      "refresh_status": "重新整理狀態",
+      "unload_model_confirm": "您確定要卸載模型「{model}」嗎？",
+      "running_models": {
+        "vram": "{size} 顯示記憶體",
+        "params": "{size} 個參數",
+        "quant": "{level} 量化",
+        "thinking": "推理",
+        "no_active_models": "Ollama 已連接，但沒有啟用的模型",
+        "not_connected_to_ollama": "未連接到 Ollama",
+        "lm_studio_no_active_models": "LM Studio 已連接，但沒有啟用的模型",
+        "not_connected_to_lm_studio": "未連接到 LM Studio"
+      },
+      "delete_model_confirm": "您確定要刪除模型「{model}」嗎？"
+    },
+    "title": "設定",
+    "model_downloader": {
+      "description": "此模型需要在使用前下載。下載可能需要幾分鐘的時間。",
+      "downloading_model": "正在下載「{model}」",
+      "download_model": "下載「{model}」",
+      "downloading": "您的模型正在下載中，請稍候…",
+      "download": "下載",
+      "retry": "重試",
+      "unable_to_download": "無法開始下載",
+      "could_not_connect": "我們無法連接到 {endpointType}。請確保 {endpointType} 正在運行，然後再試一次。"
+    },
+    "webllm_downloader": {
+      "description": "要使用本機模式，您需要下載 {model} 模型（{size}）。您現在要下載嗎？"
+    },
+    "writing_tools": {
+      "title": "寫作工具",
+      "basic_config": {
+        "enable": "啟用寫作工具",
+        "enable_desc": "選取文字時顯示寫作輔助選項",
+        "title": "基本設定"
+      },
+      "description": "設定各種寫作輔助功能",
+      "tool_config": {
+        "at_least_one_tool_error": "至少必須選擇一個書寫工具。",
+        "list": {
+          "description": "將內容轉換為清晰、有條理的清單",
+          "title": "清單"
+        },
+        "proofread": {
+          "description": "檢查文法、拼字和標點符號錯誤",
+          "title": "校對"
+        },
+        "rewrite": {
+          "description": "改善文字清晰度和流暢性",
+          "title": "重寫"
+        },
+        "sparkle": {
+          "description": "添加表情符號和視覺元素",
+          "title": "美化"
+        },
+        "title": "工具配置"
+      }
+    },
+    "chat": {
+      "title": "聊天",
+      "description": "設定聊天功能和快速操作",
+      "basic_config": {
+        "title": "基本設定",
+        "chat_model": "聊天模型",
+        "chat_model_description": "選擇聊天對話的AI模型",
+        "chat_system_prompt": "聊天系統提示",
+        "chat_system_prompt_description": "定義AI在聊天對話中的行為和角色",
+        "thinking_visibility": "思考過程展示",
+        "thinking_visibility_description": "選擇LLM推理時思考過程的展示方式",
+        "thinking_visibility_hide": "隱藏思考",
+        "thinking_visibility_hide_description": "僅顯示載入動畫和最終回答",
+        "thinking_visibility_preview": "預覽思考",
+        "thinking_visibility_preview_description": "顯示最後2行，可展開",
+        "thinking_visibility_full": "完整展示思考",
+        "thinking_visibility_full_description": "預設完全展開，可收起"
+      },
+      "quick_actions": {
+        "title": "快速動作",
+        "reset_to_default": "重設為預設值",
+        "reset_to_default_confirm": "您確定要將快速動作重設為預設值嗎？"
+      }
+    },
+    "common": {
+      "saved": "已儲存"
+    },
+    "interface": {
+      "title": "介面",
+      "interface_language": "介面語言",
+      "theme": "主題",
+      "theme_light": "淺色",
+      "theme_dark": "深色",
+      "theme_system": "系統"
+    },
+    "header": {
+      "starts_on_github": "Stars on GitHub",
+      "goto_website": "前往網站"
+    },
+    "providers": {
+      "lm_studio": {
+        "title": "配置 LM Studio",
+        "already_installed": "已經安裝並執行 LM Studio 了嗎？",
+        "model_management_desc": "模型下載、載入和刪除必須在 LM Studio 桌面應用程式中完成。這裡只顯示目前的運行狀態。"
+      },
+      "ollama": {
+        "title": "配置 Ollama"
+      }
+    },
+    "get_lm_studio": "取得 LM Studio",
+    "delete": "刪除",
+    "lm_studio": {
+      "server_address": "伺服器位址",
+      "server_address_desc": "LM Studio 伺服器 API 端點"
+    },
+    "webllm_desc_lm_studio": "您現在正在使用 WebLLM: qwen3:0.6b 進行快速試用。如需完整模型支援和更佳效能，請安裝 LM Studio。",
+    "gmail_tools": {
+      "title": "Gmail 工具",
+      "description": "配置各種寫作輔助功能",
+      "basic_config": {
+        "title": "基本設定",
+        "enable": "啟用 Gmail 工具",
+        "enable_desc": "在 Gmail 內直接顯示 AI 輔助功能。",
+        "output_language": "輸出語言",
+        "output_language_desc": "選擇 AI 生成郵件的預設語言。",
+        "output_style": "輸出風格",
+        "output_style_desc": "選擇郵件的預設語調",
+        "options": {
+          "auto": "自動",
+          "default": "預設"
+        }
+      },
+      "system_prompt": {
+        "title": "系統提示",
+        "summarize": {
+          "title": "總結",
+          "description": "快速提取長郵件或整個郵件串的關鍵要點。"
+        },
+        "reply": {
+          "title": "回覆",
+          "description": "基於郵件內容和您的備註即時起草自然回覆。"
+        },
+        "compose": {
+          "title": "撰寫",
+          "description": "從頭開始或完善您的草稿。"
+        },
+        "reset_to_default": "重置為預設",
+        "reset_to_default_confirm": "您確定要將 {setting} 重設為預設值嗎？"
+      }
+    }
+  },
+  "context_menu": {
+    "quick_actions": {
+      "title": "快捷操作"
+    },
+    "translation": {
+      "show_original": "顯示原始頁面",
+      "translate_page_into": "將此頁面翻譯成{language}",
+      "translate_selected_text": "翻譯選取的文字"
+    },
+    "add_image": {
+      "title": "新增圖片至聊天"
+    },
+    "settings": {
+      "title": "設定"
+    }
+  },
+  "errors": {
+    "model_not_found": "糟糕！發生錯誤。請檢查設定中的連線並重試。",
+    "model_request_error": "糟糕！發生錯誤。請檢查設定中的連線並重試。",
+    "model_request_timeout": "請求逾時，請檢查您的連線或考慮開始新的會話，因為長內容可能會影響回應時間。",
+    "timeout_error": "操作計時：{message}",
+    "unknown_error": "發生意外錯誤：{message}",
+    "webllm_not_supported": "WebLLM 在您的裝置上不受支援。",
+    "max_characters_error": "最多允許 {count} 個字符"
+  },
+  "common": {
+    "cancel": "取消",
+    "duration": {
+      "days": "{day} 天 | {day} 天",
+      "seconds": "{second} 秒 | {second} 秒",
+      "minutes": "{minute} 分鐘 | {minute} 分鐘",
+      "hours": "{hour} 小時 | {hour} 小時",
+      "years": "{year} 年 | {year} 年",
+      "months": "{month} 個月 | {month} 個月"
+    },
+    "confirm": "確認",
+    "send": "傳送"
+  },
+  "ollama": {
+    "sites": {
+      "add_to_nativemind": "在 TechieMind 中使用"
+    }
+  },
+  "popup": {
+    "reload_page": "請重新載入頁面以使用 TechieMind。",
+    "page_not_supported": "此頁面不受 TechieMind 支援。",
+    "local_pdf_file_not_supported": "由於瀏覽器權限限制，我們無法直接存取您電腦上的本地檔案。請在另一個瀏覽器分頁中開啟外掛程式，並手動上傳本地 PDF 檔案。"
+  },
+  "writing_tools": {
+    "processing": "處理中...",
+    "rewrite_suggestion": "重寫建議",
+    "sparkle_text": "美化文字",
+    "key_points": "重點",
+    "grammar_and_style": "語法與風格",
+    "proofread": "校對",
+    "list": "清單",
+    "sparkle": "美化",
+    "rewrite": "重寫",
+    "apply": "套用",
+    "dismiss": "關閉"
+  },
+  "textarea": {
+    "reset_to_default": "重設為預設值"
+  },
+  "tooltips": {
+    "clear_chat": "清空聊天",
+    "settings": "設定",
+    "pin_sidebar": "固定",
+    "unpin_sidebar": "取消固定",
+    "close": "關閉",
+    "chat_history": "歷史",
+    "new_chat": "新聊天",
+    "back": "返回",
+    "copy_message": "複製訊息",
+    "edit_message": "編輯訊息",
+    "retry_message": "重試"
+  },
+  "gmail_tools": {
+    "buttons": {
+      "ai_summary": "AI 總結",
+      "ai_reply": "AI 回覆",
+      "ai_polish": "AI 潤色"
+    },
+    "modals": {
+      "open_sidebar_title": "需要開啟側邊欄",
+      "open_sidebar_description": "請手動開啟 TechieMind 側邊欄以使用此功能。",
+      "confirm": "確定",
+      "close": "關閉"
+    },
+    "cards": {
+      "reply": {
+        "title": "回覆建議",
+        "processing": "處理中...",
+        "regenerate": "重新生成",
+        "apply": "套用",
+        "language_selector": "語言",
+        "style_selector": "風格",
+        "copy_to_clipboard": "複製到剪貼簿"
+      },
+      "compose": {
+        "title": "AI 撰寫",
+        "subject": "主旨：",
+        "email_body": "郵件內容：",
+        "processing": "處理中...",
+        "regenerate": "重新生成",
+        "apply": "套用",
+        "language_selector": "語言",
+        "style_selector": "風格",
+        "copy_subject_to_clipboard": "複製主旨到剪貼簿",
+        "copy_body_to_clipboard": "複製內容到剪貼簿",
+        "no_subject_generated": "未生成主旨"
+      },
+      "styles": {
+        "change_style": "更改風格",
+        "formal": "正式",
+        "friendly": "友善",
+        "urgent": "緊急"
+      },
+      "notifications": {
+        "copied_to_clipboard": "已複製到剪貼簿！",
+        "subject_copied": "主旨已複製到剪貼簿！",
+        "body_copied": "內容已複製到剪貼簿！",
+        "reply_applied": "回覆已套用到撰寫框！",
+        "email_content_applied": "郵件內容已套用到撰寫欄位！",
+        "no_content_to_apply": "沒有內容可套用",
+        "no_compose_box_found": "未找到撰寫框",
+        "failed_to_copy": "複製到剪貼簿失敗",
+        "failed_to_apply_reply": "套用回覆內容失敗",
+        "failed_to_apply_compose": "套用撰寫內容失敗"
+      },
+      "errors": {
+        "failed_to_summarize": "總結郵件失敗：",
+        "failed_to_show_reply_card": "顯示 Gmail 回覆卡片失敗：",
+        "failed_to_show_compose_card": "顯示 Gmail 撰寫卡片失敗：",
+        "failed_to_locate_reply_element": "無法定位回覆撰寫元素",
+        "error_generating_reply": "生成回覆出錯：{error}",
+        "error_generating_compose": "生成撰寫內容出錯：{error}"
+      }
+    }
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "chat": {
+    "messages": {
+      "thought_for_seconds": "Думаю {second} секунду | Думаю {second} секунд",
+      "thinking": "Думаю...",
+      "reading": "Читаю",
+      "search_locally": "Ищу локально в браузере...",
+      "used_model": "Используется {model}"
+    },
+    "quick_actions": {
+      "title": "Быстрые действия"
+    },
+    "thinking_mode": {
+      "label": "Мышление",
+      "low": "Низкий",
+      "medium": "Средний",
+      "high": "Высокий"
+    },
+    "input": {
+      "placeholder": {
+        "ask_anything": "Спросите что-нибудь...",
+        "ask_follow_up": "Задайте дополнительный вопрос..."
+      },
+      "attachment_selector": {
+        "all_tabs": "Все открытые вкладки",
+        "upload_from_computer": "Загрузить с моего компьютера",
+        "image_oversize": "Размер изображения должен быть меньше {size}",
+        "too_many_images": "Максимально разрешено {max} файлов изображений",
+        "unsupported_image_type": "Неподдерживаемый формат изображения. Пожалуйста, загрузите файлы JPEG или PNG.",
+        "unsupported_model": "Загрузка изображений требует модель с возможностями компьютерного зрения. Пожалуйста, переключитесь на Gemma3 или аналогичную модель с поддержкой зрения.",
+        "pdf_oversize": "Размер PDF-файла должен быть меньше {size}",
+        "pdf_text_extract_error": "Извлечение текста не удалось - этот PDF может быть отсканированным или основанным на изображениях.",
+        "too_many_pdfs": "Максимально разрешено {max} PDF файлов",
+        "pdf_page_count_exceeded": "PDF должен содержать менее {max} страниц",
+        "only_load_partial_pages": "Загружены только первые {max} страниц из-за размера файла",
+        "selected_text_prefix": "Выделенный текст:",
+        "captured_page_prefix": "Захваченная страница:"
+      }
+    },
+    "prompt": {
+      "highlight_key_insights": {
+        "title": "Выделите ключевые идеи"
+      },
+      "search_more": {
+        "title": "Поиск дополнительного контента такого типа"
+      },
+      "summarize_page_content": {
+        "title": "Резюмировать страницу"
+      }
+    },
+    "tool_calls": {
+      "common": {
+        "reading": "Чтение",
+        "read_failed": "Ошибка чтения：{error}",
+        "reading_success": "Чтение завершено"
+      },
+      "search_online": {
+        "searching": "Поиск: \"{query}\"...",
+        "search_completed": "Поиск завершен: \"{query}\"",
+        "search_failed": "Поиск не удался: {query}"
+      },
+      "fetch_page": {
+        "error_no_content": "контент не найден"
+      },
+      "view_image": {
+        "analyzing": "Анализируется: {title}",
+        "analyze_failed": "Анализ не удался: {error}",
+        "analyze_success": "Анализ завершен: {title}",
+        "image_not_found": "изображение не найдено"
+      },
+      "view_pdf": {
+        "pdf_not_found": "PDF не найден"
+      },
+      "view_tab": {
+        "tab_not_found": "вкладка не найдена"
+      },
+      "page_click": {
+        "click": "Нажмите {content}",
+        "error_can_not_click": "Невозможно нажать и перейти к {destination}",
+        "error_no_active_tab": "Активная вкладка не найдена",
+        "error_unable_to_jump": "Невозможно нажать и перейти к {destination}",
+        "redirected": "Перенаправлено на {destination}",
+        "error_click_before_view_tab": "Попробуйте нажать на ссылку страницы перед просмотром любых страниц",
+        "error_click_incorrect_link": "Попробуйте нажать на неправильную ссылку страницы"
+      }
+    },
+    "tools": {
+      "online_search": {
+        "title": "Поиск"
+      }
+    },
+    "camera": {
+      "permission_reload_title": "Требуется перезагрузка",
+      "permission_reload_description": "После предоставления разрешения переактивируйте расширение TechieMind в Firefox для включения функции скриншота.",
+      "reload_extension": "Перезагрузить расширение"
+    }
+  },
+  "chat_history": {
+    "delete_confirm": "Вы уверены, что хотите удалить эту беседу? Это действие нельзя отменить.",
+    "delete": "Удалить",
+    "rename": "Переименовать",
+    "unpin": "Открепить",
+    "pin": "Закрепить",
+    "title": "История чатов",
+    "pinned_section": "Закреплённые чаты",
+    "recent_section": "Недавние чаты",
+    "empty_state": "Пока нет разговоров",
+    "untitled_chat": "Чат без названия",
+    "new_chat": "Новый чат",
+    "save": "Сохранить",
+    "cancel": "Отмена"
+  },
+  "onboarding": {
+    "banner": {
+      "description": "Приватный и безопасный, с мощными функциями, которые полностью работают на вашем устройстве.",
+      "title": "ИИ на устройстве, созданный специально для вас"
+    },
+    "guide": {
+      "already_installed": "Уже установлен и запущен {endpointType}?",
+      "features": {
+        "1": "Запускайте продвинутые модели, такие как gpt-oss, DeepSeek, Qwen, Llama",
+        "2": "Настраивайте и переключайте модели с полным контролем",
+        "3": "Ваши данные остаются приватными на вашем устройстве"
+      },
+      "follow_our_tutorial": "Следуйте нашему руководству по установке",
+      "install_desc": "Как вы хотите запустить ИИ локально?",
+      "need_help": "Нужна помощь?",
+      "setup": "Настройка",
+      "step1": "Шаг 1",
+      "download_model_to_begin": "Загрузите модель, чтобы начать.",
+      "select_model_to_start": "Выберите и загрузите модель, чтобы начать",
+      "download_and_install": "Скачать & Установить",
+      "choose_model": "Выбрать модель",
+      "no_sure_which_one": "🤔 Не уверены, какую выбрать?",
+      "learn_about_models": "Узнать о моделях",
+      "looking_for_more_options": "🔍 Ищете больше вариантов?",
+      "browse_more_models": "Просмотреть больше моделей",
+      "get_endpoint": "Получить {endpointType}",
+      "lm_studio_select_desc": "Простое в использовании настольное приложение",
+      "ollama_select_desc": "Профессиональный инструмент разработчика",
+      "unlock_full_power_with": "Разблокируйте полную мощь локального ИИ с {endpointType}."
+    },
+    "webllm_tutorial": {
+      "desc": "Используйте легкую модель (QWEN 0,6B) прямо в вашем браузере - без настройки, без ожидания.",
+      "not_support_webllm": "WebLLM не поддерживается на вашем устройстве",
+      "start_with_webllm": "Начните с веб-модели",
+      "title": "Не готовы к установке? \nПопробуйте сразу."
+    },
+    "welcome_msg": {
+      "title": "👋 Добро пожаловать в **TechieMind**",
+      "body": "TechieMind работает полностью на вашем устройстве, обеспечивая конфиденциальность и безопасность каждого чата.\n\nВот что вы можете делать:\n- Общаться через вкладки, сохраняя контекст во время просмотра.\n- Резюмировать, искать и переводить любую веб-страницу локально.\n- Использовать умных Агентов для написания, исследования или глубокого анализа.\n- Загружать PDF или изображения для мгновенного понимания на устройстве.\n\nВы можете начать с быстрых действий ниже."
+    },
+    "ollama_is_running": "Ollama запущена",
+    "backend_is_running": "{endpointType} запущен"
+  },
+  "settings": {
+    "cache": {
+      "title": "Кэш Переводов",
+      "enable": "Включить Кэш",
+      "enabled": "Включен",
+      "disabled": "Отключен",
+      "max_size": "Максимальный Размер",
+      "retention_days": "Период Хранения",
+      "days": "дней"
+    },
+    "advanced": {
+      "title": "Расширенные"
+    },
+    "choose_model": "Выбрать модель",
+    "download": "Загрузить",
+    "feedback": {
+      "contact_msg": "📧 Вопросы или отзывы? Присоединяйтесь к нашему {discord} или напишите нам по адресу {email}.",
+      "join_waitlist": "💼 Хотите использовать в компании? {join_waitlist_link} для корпоративных обновлений.",
+      "join_waitlist_link": "Присоединиться к списку ожидания",
+      "discord": "Discord"
+    },
+    "get_ollama": "Получить Ollama",
+    "models": {
+      "title": "Модели",
+      "discover_more": "Откройте для себя больше моделей",
+      "no_model": "⚠️ Модель отсутствует",
+      "add_model_to_start": "Добавьте модель для начала",
+      "ollama_models": "Модели Ollama ({count})",
+      "lmstudio_models": "LM Studio Модели ({count})"
+    },
+    "ollama": {
+      "already_installed": "Уже установлен и запущен Ollama?",
+      "connected": "Подключено",
+      "connection_error": "Ошибка соединения",
+      "downloadable_model": "Доступные для загрузки модели",
+      "follow_guide": "Следуйте нашему руководству по установке",
+      "learn_more_about_models": "Узнайте больше о моделях",
+      "need_help": "Нужна помощь?",
+      "re_scan": "Повторное сканирование",
+      "server_address": "Адрес сервера",
+      "setup": "Настройка",
+      "unconnected": "Не подключено",
+      "context_window_size": "Размер окна контекста",
+      "custom_context_window_size": "Пользовательский размер окна контекста",
+      "context_window_size_desc": "Введите пользовательский размер окна контекста в токенах (минимум: 512)",
+      "server_address_desc": "Конечная точка API сервера Ollama",
+      "context_window_size_error": "Размер окна контекста должен быть не менее {min} токенов",
+      "unload": "Выгрузить",
+      "expires_in": "Истекает через {duration}",
+      "running": "Выполняется",
+      "running_models": "Работающие модели",
+      "model_management": "Управление моделями",
+      "downloaded_models": "Загруженные модели"
+    },
+    "prompts": {
+      "chat_system_prompt": "Системная подсказка для чата",
+      "title": "Подсказки",
+      "translation_system_prompt": "Системный промпт для перевода"
+    },
+    "quick_actions": {
+      "description": "Настройте быстрые действия для запуска ваших любимых подсказок из нового чата или через контекстное меню.",
+      "edit": {
+        "cancel": "Отмена",
+        "prompt": "Подсказка",
+        "reset": "Сбросить",
+        "save": "Сохранить",
+        "show_in_context_menu": "Показать в контекстном меню",
+        "title": "Название"
+      },
+      "title": "Настройка быстрых действий"
+    },
+    "test": "Тест",
+    "translation": {
+      "title": "Язык перевода",
+      "description": "Настройте функциональность перевода и целевые языки",
+      "basic_config": {
+        "target_language": "Целевой язык",
+        "target_language_desc": "Выберите целевой язык для перевода",
+        "title": "Базовая конфигурация",
+        "translation_model": "Модель перевода",
+        "translation_model_desc": "Выберите модель ИИ для задач перевода",
+        "translation_system_prompt": "Системный промпт для перевода",
+        "translation_system_prompt_desc": "Определите поведение ИИ и формат вывода во время перевода",
+        "translation_system_prompt_error": "системная подсказка должна содержать {'{{LANGUAGE}}'}"
+      }
+    },
+    "webllm-desc": "Вы сейчас используете WebLLM: qwen3:0.6b для быстрого ознакомления. Для полной поддержки модели и лучшей производительности, пожалуйста, установите Ollama.",
+    "general": {
+      "system_language": "Язык системы",
+      "title": "Общие",
+      "description": "Настройте основные параметры и подключение к серверу",
+      "discover_more_models": "Откройте для себя больше моделей",
+      "refresh_status": "Обновить статус",
+      "unload_model_confirm": "Вы уверены, что хотите выгрузить модель \"{model}\"?",
+      "running_models": {
+        "vram": "{size} видеопамяти",
+        "params": "{size} параметров",
+        "quant": "{level} квант",
+        "thinking": "Мышление",
+        "no_active_models": "Ollama подключен, но нет активных моделей",
+        "not_connected_to_ollama": "Не подключено к Ollama",
+        "lm_studio_no_active_models": "LM Studio подключена, но нет активных моделей",
+        "not_connected_to_lm_studio": "Не подключено к LM Studio"
+      },
+      "delete_model_confirm": "Вы уверены, что хотите удалить модель \"{model}\"?"
+    },
+    "title": "Настройки",
+    "model_downloader": {
+      "description": "Эту модель необходимо загрузить перед использованием. Загрузка может занять несколько минут.",
+      "downloading_model": "Загрузка \"{model}\"",
+      "download_model": "Скачать \"{model}\"",
+      "downloading": "Ваша модель загружается. Пожалуйста, подождите…",
+      "download": "Скачать",
+      "retry": "Повторить",
+      "unable_to_download": "Невозможно начать загрузку",
+      "could_not_connect": "Не удалось подключиться к {endpointType}. Убедитесь, что {endpointType} запущен, и повторите попытку."
+    },
+    "webllm_downloader": {
+      "description": "Для использования локального режима необходимо загрузить модель {model} ({size}). Хотите загрузить её сейчас?"
+    },
+    "writing_tools": {
+      "title": "Инструменты для письма",
+      "basic_config": {
+        "enable": "Включить инструменты письма",
+        "enable_desc": "Показывать параметры помощи в написании при выделении текста",
+        "title": "Основные настройки"
+      },
+      "description": "Настройте различные функции помощи в написании",
+      "tool_config": {
+        "at_least_one_tool_error": "Должен быть выбран хотя бы один инструмент для письма.",
+        "list": {
+          "description": "Преобразуйте контент в четкие, организованные списки",
+          "title": "Список"
+        },
+        "proofread": {
+          "description": "Проверить грамматические, орфографические и пунктуационные ошибки",
+          "title": "Корректировать"
+        },
+        "rewrite": {
+          "description": "Улучшить ясность и плавность текста",
+          "title": "Переписать"
+        },
+        "sparkle": {
+          "description": "Добавьте эмодзи и визуальные элементы",
+          "title": "Украшение"
+        },
+        "title": "Конфигурация инструмента"
+      }
+    },
+    "chat": {
+      "title": "Чат",
+      "description": "Настройте функциональность чата и быстрые действия",
+      "basic_config": {
+        "title": "Базовая конфигурация",
+        "chat_model": "Модель чата",
+        "chat_model_description": "Выберите модель ИИ для чат-разговоров",
+        "chat_system_prompt": "Системная подсказка чата",
+        "chat_system_prompt_description": "Определите поведение и роль ИИ во время чат-разговоров",
+        "thinking_visibility": "Видимость процесса мышления",
+        "thinking_visibility_description": "Выберите, как отображается процесс мышления во время рассуждений LLM",
+        "thinking_visibility_hide": "Скрыть мышление",
+        "thinking_visibility_hide_description": "Показывать только загрузку и окончательный ответ",
+        "thinking_visibility_preview": "Предварительный просмотр мышления",
+        "thinking_visibility_preview_description": "Показать последние 2 строки, расширяемые",
+        "thinking_visibility_full": "Показать полное мышление",
+        "thinking_visibility_full_description": "Показать все по умолчанию, сворачиваемое"
+      },
+      "quick_actions": {
+        "title": "Быстрые действия",
+        "reset_to_default": "Сбросить к настройкам по умолчанию",
+        "reset_to_default_confirm": "Вы уверены, что хотите сбросить быстрые действия к значениям по умолчанию?"
+      }
+    },
+    "common": {
+      "saved": "Сохранено"
+    },
+    "interface": {
+      "title": "Интерфейс",
+      "interface_language": "Язык интерфейса",
+      "theme": "Тема",
+      "theme_light": "Светлая",
+      "theme_dark": "Темная",
+      "theme_system": "Системная"
+    },
+    "header": {
+      "starts_on_github": "Звезды на GitHub",
+      "goto_website": "Перейти на сайт"
+    },
+    "providers": {
+      "lm_studio": {
+        "title": "Настроить LM Studio",
+        "already_installed": "Уже установили и запустили LM Studio?",
+        "model_management_desc": "Загрузка, загрузка и удаление модели должны выполняться в настольном приложении LM Studio. Здесь отображается только текущий статус работы."
+      },
+      "ollama": {
+        "title": "Настроить Ollama"
+      }
+    },
+    "get_lm_studio": "Получить LM Studio",
+    "delete": "Удалить",
+    "lm_studio": {
+      "server_address": "Адрес сервера",
+      "server_address_desc": "Конечная точка API сервера LM Studio"
+    },
+    "webllm_desc_lm_studio": "Вы сейчас используете WebLLM: qwen3:0.6b для быстрого ознакомления. Для полной поддержки модели и лучшей производительности, пожалуйста, установите LM Studio.",
+    "gmail_tools": {
+      "title": "Инструменты Gmail",
+      "description": "Настройка различных функций помощи в написании",
+      "basic_config": {
+        "title": "Основные настройки",
+        "enable": "Включить инструменты Gmail",
+        "enable_desc": "Показывать функции помощи ИИ прямо в Gmail.",
+        "output_language": "Язык вывода",
+        "output_language_desc": "Выберите язык по умолчанию для писем, сгенерированных ИИ.",
+        "output_style": "Стиль вывода",
+        "output_style_desc": "Выберите тон по умолчанию для ваших писем",
+        "options": {
+          "auto": "Автоматически",
+          "default": "По умолчанию"
+        }
+      },
+      "system_prompt": {
+        "title": "Системный промпт",
+        "summarize": {
+          "title": "Резюмировать",
+          "description": "Быстро извлекайте ключевые моменты из длинных писем или целых цепочек."
+        },
+        "reply": {
+          "title": "Ответить",
+          "description": "Мгновенно создавайте естественный ответ на основе содержания письма и ваших заметок."
+        },
+        "compose": {
+          "title": "Создать",
+          "description": "Начните с нуля или отполируйте свой черновик."
+        },
+        "reset_to_default": "Сбросить по умолчанию",
+        "reset_to_default_confirm": "Вы уверены, что хотите сбросить {setting} к значениям по умолчанию?"
+      }
+    }
+  },
+  "context_menu": {
+    "quick_actions": {
+      "title": "Быстрые действия"
+    },
+    "translation": {
+      "show_original": "Показать оригинал",
+      "translate_page_into": "Перевести эту страницу на {language}",
+      "translate_selected_text": "Перевести выделенный текст"
+    },
+    "add_image": {
+      "title": "Добавить изображение в чат"
+    },
+    "settings": {
+      "title": "Настройки"
+    }
+  },
+  "errors": {
+    "model_not_found": "Упс! Что-то пошло не так. Пожалуйста, проверьте ваше подключение в настройках и попробуйте снова.",
+    "model_request_error": "Упс! Что-то пошло не так. Пожалуйста, проверьте ваше подключение в настройках и попробуйте снова.",
+    "model_request_timeout": "Превышено время ожидания запроса, пожалуйста, проверьте ваше соединение или рассмотрите возможность начать новую сессию, поскольку длинные контексты могут влиять на время отклика.",
+    "timeout_error": "Время операции истекло: {message}",
+    "unknown_error": "Произошла неожиданная ошибка: {message}",
+    "webllm_not_supported": "WebLLM не поддерживается на вашем устройстве.",
+    "max_characters_error": "Максимум {count} символов разрешено"
+  },
+  "common": {
+    "cancel": "Отменить",
+    "duration": {
+      "days": "{day} день | {day} дня | {day} дней",
+      "seconds": "{second} секунда | {second} секунды | {second} секунд",
+      "minutes": "{minute} минута | {minute} минуты",
+      "hours": "{hour} час | {hour} часа | {hour} часов",
+      "years": "{year} год | {year} лет",
+      "months": "{month} месяц | {month} месяца | {month} месяцев"
+    },
+    "confirm": "Подтвердить",
+    "send": "Отправить"
+  },
+  "ollama": {
+    "sites": {
+      "add_to_nativemind": "Использование в TechieMind"
+    }
+  },
+  "popup": {
+    "reload_page": "Пожалуйста, перезагрузите страницу, чтобы использовать TechieMind.",
+    "page_not_supported": "Эта страница не поддерживается TechieMind.",
+    "local_pdf_file_not_supported": "Из-за ограничений разрешений браузера мы не можем напрямую получить доступ к локальным файлам на вашем компьютере. Пожалуйста, откройте плагин в другой вкладке браузера и вручную загрузите локальный PDF-файл."
+  },
+  "writing_tools": {
+    "processing": "Обработка...",
+    "rewrite_suggestion": "Предложение по переписыванию",
+    "sparkle_text": "Украшение текста",
+    "key_points": "Ключевые моменты",
+    "grammar_and_style": "Грамматика и стиль",
+    "proofread": "Корректировать",
+    "list": "Список",
+    "sparkle": "Украшение",
+    "rewrite": "Переписать",
+    "apply": "Применить",
+    "dismiss": "Отклонить"
+  },
+  "textarea": {
+    "reset_to_default": "Сбросить к настройкам по умолчанию"
+  },
+  "tooltips": {
+    "clear_chat": "Очистить чат",
+    "settings": "Настройки",
+    "pin_sidebar": "Закрепить",
+    "unpin_sidebar": "Открепить",
+    "close": "Закрыть",
+    "chat_history": "История",
+    "new_chat": "Новый чат",
+    "back": "Назад",
+    "copy_message": "Скопировать сообщение",
+    "edit_message": "Редактировать сообщение",
+    "retry_message": "Повторить"
+  },
+  "gmail_tools": {
+    "buttons": {
+      "ai_summary": "ИИ резюме",
+      "ai_reply": "ИИ ответ",
+      "ai_polish": "ИИ полировка"
+    },
+    "modals": {
+      "open_sidebar_title": "Требуется открытие боковой панели",
+      "open_sidebar_description": "Пожалуйста, вручную откройте боковую панель TechieMind, чтобы использовать эту функцию.",
+      "confirm": "OK",
+      "close": "Закрыть"
+    },
+    "cards": {
+      "reply": {
+        "title": "Предложение ответа",
+        "processing": "Обработка...",
+        "regenerate": "Перегенерировать",
+        "apply": "Применить",
+        "language_selector": "Язык",
+        "style_selector": "Стиль",
+        "copy_to_clipboard": "Копировать в буфер обмена"
+      },
+      "compose": {
+        "title": "ИИ создание",
+        "subject": "Тема:",
+        "email_body": "Текст письма:",
+        "processing": "Обработка...",
+        "regenerate": "Перегенерировать",
+        "apply": "Применить",
+        "language_selector": "Язык",
+        "style_selector": "Стиль",
+        "copy_subject_to_clipboard": "Копировать тему в буфер обмена",
+        "copy_body_to_clipboard": "Копировать текст в буфер обмена",
+        "no_subject_generated": "Тема не создана"
+      },
+      "styles": {
+        "change_style": "Изменить стиль",
+        "formal": "Формальный",
+        "friendly": "Дружелюбный",
+        "urgent": "Срочный"
+      },
+      "notifications": {
+        "copied_to_clipboard": "Скопировано в буфер обмена!",
+        "subject_copied": "Тема скопирована в буфер обмена!",
+        "body_copied": "Текст скопирован в буфер обмена!",
+        "reply_applied": "Ответ применен к полю создания!",
+        "email_content_applied": "Содержимое письма применено к полям создания!",
+        "no_content_to_apply": "Нет содержимого для применения",
+        "no_compose_box_found": "Поле создания не найдено",
+        "failed_to_copy": "Не удалось скопировать в буфер обмена",
+        "failed_to_apply_reply": "Не удалось применить содержимое ответа",
+        "failed_to_apply_compose": "Не удалось применить содержимое создания"
+      },
+      "errors": {
+        "failed_to_summarize": "Не удалось резюмировать письмо:",
+        "failed_to_show_reply_card": "Не удалось показать карточку ответа Gmail:",
+        "failed_to_show_compose_card": "Не удалось показать карточку создания Gmail:",
+        "failed_to_locate_reply_element": "Не удалось найти элемент создания ответа",
+        "error_generating_reply": "Ошибка генерации ответа: {error}",
+        "error_generating_compose": "Ошибка генерации содержимого создания: {error}"
+      }
+    }
+  }
+}

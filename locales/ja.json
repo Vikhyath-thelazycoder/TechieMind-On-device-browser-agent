@@ -1,0 +1,536 @@
+{
+  "chat": {
+    "messages": {
+      "thought_for_seconds": "{second}秒間考えています | {second}秒間考えています",
+      "thinking": "考え中...",
+      "reading": "読み込み中",
+      "search_locally": "ブラウザ内で検索中...",
+      "used_model": "{model}を使用"
+    },
+    "quick_actions": {
+      "title": "クイックアクション"
+    },
+    "thinking_mode": {
+      "label": "思考",
+      "low": "低",
+      "medium": "中",
+      "high": "高"
+    },
+    "input": {
+      "placeholder": {
+        "ask_anything": "何でも質問してください...",
+        "ask_follow_up": "続けて質問してください..."
+      },
+      "attachment_selector": {
+        "all_tabs": "すべての開いているタブ",
+        "upload_from_computer": "コンピューターからアップロード",
+        "image_oversize": "画像サイズは{size}未満である必要があります",
+        "too_many_images": "最大{max}個の画像ファイルが許可されています",
+        "unsupported_image_type": "サポートされていない画像形式です。JPEGまたはPNGファイルをアップロードしてください。",
+        "unsupported_model": "画像のアップロードには視覚対応モデルが必要です。Gemma3または同様の視覚モデルに切り替えてください。",
+        "pdf_oversize": "PDFファイルサイズは{size}未満である必要があります",
+        "pdf_text_extract_error": "テキスト抽出に失敗しました - このPDFはスキャンされたものか画像ベースの可能性があります。",
+        "too_many_pdfs": "最大{max}個のPDFファイルまで許可されています",
+        "pdf_page_count_exceeded": "PDFは{max}ページ以下である必要があります",
+        "only_load_partial_pages": "ファイルサイズのため、最初の{max}ページのみが読み込まれました",
+        "selected_text_prefix": "選択テキスト：",
+        "captured_page_prefix": "キャプチャページ："
+      }
+    },
+    "prompt": {
+      "highlight_key_insights": {
+        "title": "重要な洞察を強調する"
+      },
+      "search_more": {
+        "title": "このようなコンテンツをもっと検索する"
+      },
+      "summarize_page_content": {
+        "title": "ページを要約する"
+      }
+    },
+    "tool_calls": {
+      "common": {
+        "reading": "読み込み中",
+        "read_failed": "読み込み失敗：{error}",
+        "reading_success": "読み込み完了"
+      },
+      "search_online": {
+        "searching": "検索中: \"{query}\"...",
+        "search_completed": "検索完了: \"{query}\"",
+        "search_failed": "検索に失敗しました: {query}"
+      },
+      "fetch_page": {
+        "error_no_content": "コンテンツが見つかりません"
+      },
+      "view_image": {
+        "analyzing": "分析中: {title}",
+        "analyze_failed": "解析に失敗しました: {error}",
+        "analyze_success": "分析完了: {title}",
+        "image_not_found": "画像が見つかりません"
+      },
+      "view_pdf": {
+        "pdf_not_found": "PDFが見つかりません"
+      },
+      "view_tab": {
+        "tab_not_found": "タブが見つかりません"
+      },
+      "page_click": {
+        "click": "{content}をクリック",
+        "error_can_not_click": "{destination}をクリックしてジャンプできません",
+        "error_no_active_tab": "アクティブなタブが見つかりません",
+        "error_unable_to_jump": "{destination}をクリックしてジャンプできません",
+        "redirected": "{destination}にリダイレクトされました",
+        "error_click_before_view_tab": "ページを表示する前に、ページリンクをクリックしてみてください",
+        "error_click_incorrect_link": "間違ったページリンクをクリックしてみてください"
+      }
+    },
+    "tools": {
+      "online_search": {
+        "title": "検索"
+      }
+    },
+    "camera": {
+      "permission_reload_title": "再読み込みが必要です",
+      "permission_reload_description": "権限を付与した後、スクリーンショット機能を有効にするためにFirefoxでTechieMind拡張機能を再度有効にしてください。",
+      "reload_extension": "拡張機能を再読み込み"
+    }
+  },
+  "chat_history": {
+    "delete_confirm": "この会話を削除してもよろしいですか？この操作は元に戻すことができません。",
+    "delete": "消去",
+    "rename": "名前を変更します",
+    "unpin": "ピンを外す",
+    "pin": "ピン留め",
+    "title": "チャット履歴",
+    "pinned_section": "ピン留め済みチャット",
+    "recent_section": "最近のチャット",
+    "empty_state": "まだ会話がありません",
+    "untitled_chat": "無題のチャット",
+    "new_chat": "新しいチャット",
+    "save": "保存",
+    "cancel": "キャンセル"
+  },
+  "onboarding": {
+    "banner": {
+      "description": "プライバシーと安全性を確保しながら、デバイス内で完全に動作する強力な機能を体験できます。",
+      "title": "あなたのために開発されたオンデバイスAI"
+    },
+    "guide": {
+      "already_installed": "既に{endpointType}をインストールして実行していますか？",
+      "features": {
+        "1": "高度なモデル（gpt-oss、DeepSeek、Qwen、Llama）を実行する",
+        "2": "完全な制御でモデルをカスタマイズし切り替えられます",
+        "3": "あなたのデータはデバイス上でプライベートに保たれます"
+      },
+      "follow_our_tutorial": "インストールガイドを確認する",
+      "install_desc": "AIをローカルで実行するにはどうしたいですか？",
+      "need_help": "お困りですか？",
+      "setup": "セットアップ",
+      "step1": "ステップ 1",
+      "download_model_to_begin": "モデルをダウンロードして開始してください。",
+      "select_model_to_start": "モデルを選択してダウンロードし、開始してください",
+      "download_and_install": "ダウンロード & インストール",
+      "choose_model": "モデルを選択",
+      "no_sure_which_one": "🤔 どれを選べばよいかわからない？",
+      "learn_about_models": "モデルについて学ぶ",
+      "looking_for_more_options": "🔍 より多くのオプションをお探しですか？",
+      "browse_more_models": "他のモデルを見る",
+      "get_endpoint": "{endpointType}を取得",
+      "lm_studio_select_desc": "使いやすいデスクトップアプリ",
+      "ollama_select_desc": "プロフェッショナル開発者ツール",
+      "unlock_full_power_with": "{endpointType}でローカルAIの全機能を解放しましょう。"
+    },
+    "webllm_tutorial": {
+      "desc": "ブラウザで直接軽量モデル（Qwen 0.6b）を使用できます。セットアップ不要、待ち時間なし。",
+      "not_support_webllm": "WebLLMはお使いのデバイスではサポートされていません",
+      "start_with_webllm": "Webモデルで始める",
+      "title": "インストールの準備ができていませんか？すぐに試してみましょう。"
+    },
+    "welcome_msg": {
+      "title": "👋 **TechieMind** へようこそ",
+      "body": "TechieMindは完全にお使いのデバイス上で動作し、すべてのチャットをプライベートかつ安全に保ちます。\n\nできることは次のとおりです：\n- タブを跨いでチャットし、閲覧中にコンテキストを保持します。\n- 任意のウェブページをローカルで要約、検索、翻訳します。\n- ライティング、リサーチ、深い分析のためにスマートエージェントを使用します。\n- PDFや画像をアップロードして、デバイス上で即座に理解します。\n\n下記のクイックアクションから始めることができます。"
+    },
+    "ollama_is_running": "Ollamaが実行中です",
+    "backend_is_running": "{endpointType}が実行中です"
+  },
+  "settings": {
+    "cache": {
+      "title": "翻訳キャッシュ",
+      "enable": "キャッシュを有効にする",
+      "enabled": "有効",
+      "disabled": "無効",
+      "max_size": "最大サイズ",
+      "retention_days": "保持期間",
+      "days": "日"
+    },
+    "advanced": {
+      "title": "詳細設定"
+    },
+    "choose_model": "モデルを選択",
+    "download": "ダウンロード",
+    "feedback": {
+      "contact_msg": "📧ご質問やフィードバックがありますか？{discord}に参加するか、{email}までメールでお問い合わせください。",
+      "join_waitlist": "💼職場でご利用希望の方は、エンタープライズ版の最新情報を受け取るために{join_waitlist_link}してください。",
+      "join_waitlist_link": "ウェイトリストに登録",
+      "discord": "Discord"
+    },
+    "get_ollama": "Ollamaを入手",
+    "models": {
+      "title": "モデル",
+      "discover_more": "より多くのモデルを発見する",
+      "no_model": "⚠️ モデルなし",
+      "add_model_to_start": "モデルを追加して開始",
+      "ollama_models": "Ollama モデル ({count})",
+      "lmstudio_models": "LM Studio モデル ({count})"
+    },
+    "ollama": {
+      "already_installed": "Ollamaをすでにインストールして実行していますか？",
+      "connected": "接続済み",
+      "connection_error": "接続エラー",
+      "downloadable_model": "ダウンロード可能なモデル",
+      "follow_guide": "インストールガイドを確認する",
+      "learn_more_about_models": "モデルについて詳しく知る",
+      "need_help": "お困りですか？",
+      "re_scan": "再スキャン",
+      "server_address": "サーバーアドレス",
+      "setup": "セットアップ",
+      "unconnected": "未接続",
+      "context_window_size": "コンテキストウィンドウサイズ",
+      "custom_context_window_size": "カスタムコンテキストウィンドウサイズ",
+      "context_window_size_desc": "カスタムコンテキストウィンドウサイズをトークン数で入力してください（最小値：512）",
+      "server_address_desc": "Ollama サーバー API エンドポイント",
+      "context_window_size_error": "コンテキストウィンドウサイズは最低{min}トークンである必要があります",
+      "unload": "アンロード",
+      "expires_in": "{duration}で期限切れ",
+      "running": "実行中",
+      "running_models": "実行中のモデル",
+      "model_management": "モデル管理",
+      "downloaded_models": "ダウンロード済みモデル"
+    },
+    "prompts": {
+      "chat_system_prompt": "チャットシステムプロンプト",
+      "title": "プロンプト",
+      "translation_system_prompt": "翻訳システムプロンプト"
+    },
+    "quick_actions": {
+      "description": "新規チャットや右クリックメニューから、お気に入りのプロンプトをより速く実行できるようクイックアクションを設定します。",
+      "edit": {
+        "cancel": "キャンセル",
+        "prompt": "プロンプト",
+        "reset": "リセット",
+        "save": "保存",
+        "show_in_context_menu": "右クリックメニューに表示する",
+        "title": "タイトル"
+      },
+      "title": "クイックアクションのカスタマイズ"
+    },
+    "test": "テスト",
+    "translation": {
+      "title": "翻訳言語",
+      "description": "翻訳機能と対象言語を設定する",
+      "basic_config": {
+        "target_language": "ターゲット言語",
+        "target_language_desc": "翻訳対象言語を選択してください",
+        "title": "基本設定",
+        "translation_model": "翻訳モデル",
+        "translation_model_desc": "翻訳タスク用のAIモデルを選択してください",
+        "translation_system_prompt": "翻訳システムプロンプト",
+        "translation_system_prompt_desc": "AIの動作と翻訳時の出力形式を定義する",
+        "translation_system_prompt_error": "システムプロンプトには「{{LANGUAGE}}」が含まれている必要があります"
+      }
+    },
+    "webllm-desc": "WebLLMを使用中：クイック試用のためqwen3:0.6bを使用しています。フルモデルサポートとより良いパフォーマンスのために、Ollamaをインストールしてください。",
+    "general": {
+      "system_language": "システム言語",
+      "title": "一般",
+      "description": "基本設定とサーバー接続を設定する",
+      "discover_more_models": "より多くのモデルを発見する",
+      "refresh_status": "ステータスを更新",
+      "unload_model_confirm": "モデル「{model}」をアンロードしてもよろしいですか？",
+      "running_models": {
+        "vram": "{size} VRAM",
+        "params": "{size}パラメータ",
+        "quant": "{level}クオント",
+        "thinking": "思考",
+        "no_active_models": "Ollamaに接続されていますが、アクティブなモデルがありません",
+        "not_connected_to_ollama": "Ollamaに接続されていません",
+        "lm_studio_no_active_models": "LM Studio に接続されましたが、アクティブなモデルがありません",
+        "not_connected_to_lm_studio": "LM Studioに接続されていません"
+      },
+      "delete_model_confirm": "モデル「{model}」を削除してもよろしいですか？"
+    },
+    "title": "設定",
+    "model_downloader": {
+      "description": "このモデルは使用前にダウンロードする必要があります。ダウンロードには数分かかる場合があります。",
+      "downloading_model": "「{model}」をダウンロード中",
+      "download_model": "「{model}」をダウンロード",
+      "downloading": "あなたのモデルをダウンロード中です。お待ちください…",
+      "download": "ダウンロード",
+      "retry": "リトライ",
+      "unable_to_download": "ダウンロードを開始できません",
+      "could_not_connect": "{endpointType}に接続できませんでした。{endpointType}が実行されていることを確認して、もう一度お試しください。"
+    },
+    "webllm_downloader": {
+      "description": "ローカルモードを使用するには、{model}モデル（{size}）をダウンロードする必要があります。今すぐダウンロードしますか？"
+    },
+    "writing_tools": {
+      "title": "ライティングツール",
+      "basic_config": {
+        "enable": "ライティングツールを有効にする",
+        "enable_desc": "テキストが選択されたときに文章作成支援オプションを表示する",
+        "title": "基本設定"
+      },
+      "description": "様々な文章作成支援機能を設定する",
+      "tool_config": {
+        "at_least_one_tool_error": "少なくとも1つの筆記用具を選択する必要があります。",
+        "list": {
+          "description": "コンテンツを明確で整理されたリストに変換する",
+          "title": "リスト"
+        },
+        "proofread": {
+          "description": "文法、スペル、句読点の誤りをチェックする",
+          "title": "校正"
+        },
+        "rewrite": {
+          "description": "テキストの明瞭性と流れを改善する",
+          "title": "書き直す"
+        },
+        "sparkle": {
+          "description": "絵文字と視覚的要素を追加する",
+          "title": "美化"
+        },
+        "title": "ツール設定"
+      }
+    },
+    "chat": {
+      "title": "チャット",
+      "description": "チャット機能とクイックアクションを設定する",
+      "basic_config": {
+        "title": "基本設定",
+        "chat_model": "チャットモデル",
+        "chat_model_description": "チャット会話用のAIモデルを選択してください",
+        "chat_system_prompt": "チャットシステムプロンプト",
+        "chat_system_prompt_description": "チャット会話中のAIの行動と役割を定義する",
+        "thinking_visibility": "思考プロセス表示",
+        "thinking_visibility_description": "LLM推論時の思考プロセスの表示方法を選択",
+        "thinking_visibility_hide": "思考を隠す",
+        "thinking_visibility_hide_description": "ローディングと最終回答のみ表示",
+        "thinking_visibility_preview": "思考をプレビュー",
+        "thinking_visibility_preview_description": "最後の2行を表示、展開可能",
+        "thinking_visibility_full": "完全な思考を表示",
+        "thinking_visibility_full_description": "デフォルトですべて表示、折りたたみ可能"
+      },
+      "quick_actions": {
+        "title": "クイックアクション",
+        "reset_to_default": "デフォルトにリセット",
+        "reset_to_default_confirm": "クイックアクションをデフォルト値にリセットしてもよろしいですか？"
+      }
+    },
+    "common": {
+      "saved": "保存されました"
+    },
+    "interface": {
+      "title": "インターフェース",
+      "interface_language": "インターフェース言語",
+      "theme": "テーマ",
+      "theme_light": "ライト",
+      "theme_dark": "ダーク",
+      "theme_system": "システム"
+    },
+    "header": {
+      "starts_on_github": "GitHubでスター",
+      "goto_website": "ウェブサイトに移動"
+    },
+    "providers": {
+      "lm_studio": {
+        "title": "LM Studioを設定する",
+        "already_installed": "LM Studioはすでにインストールして実行していますか？",
+        "model_management_desc": "モデルのダウンロード、読み込み、削除はLM Studio デスクトップアプリで行う必要があります。これは現在の実行状態のみを表示します。"
+      },
+      "ollama": {
+        "title": "Ollamaを設定する"
+      }
+    },
+    "get_lm_studio": "LM Studioを入手",
+    "delete": "削除",
+    "lm_studio": {
+      "server_address": "サーバーアドレス",
+      "server_address_desc": "LM Studio サーバー API エンドポイント"
+    },
+    "webllm_desc_lm_studio": "WebLLMを使用中：クイック試用のためのqwen3:0.6b。フルモデルサポートとより良いパフォーマンスのために、LM Studioをインストールしてください。",
+    "gmail_tools": {
+      "title": "Gmail ツール",
+      "description": "様々な執筆支援機能を設定",
+      "basic_config": {
+        "title": "基本設定",
+        "enable": "Gmail ツールを有効にする",
+        "enable_desc": "Gmail内でAI支援機能を直接表示します。",
+        "output_language": "出力言語",
+        "output_language_desc": "AI生成メールのデフォルト言語を選択してください。",
+        "output_style": "出力スタイル",
+        "output_style_desc": "メールのデフォルトトーンを選択してください",
+        "options": {
+          "auto": "自動",
+          "default": "デフォルト"
+        }
+      },
+      "system_prompt": {
+        "title": "システムプロンプト",
+        "summarize": {
+          "title": "要約",
+          "description": "長いメールやメールスレッド全体から重要なポイントを素早く抽出します。"
+        },
+        "reply": {
+          "title": "返信",
+          "description": "メール内容とあなたのメモに基づいて自然な返信を即座に下書きします。"
+        },
+        "compose": {
+          "title": "作成",
+          "description": "ゼロから始めるか、下書きを磨き上げます。"
+        },
+        "reset_to_default": "デフォルトにリセット",
+        "reset_to_default_confirm": "{setting}をデフォルトにリセットしてもよろしいですか？"
+      }
+    }
+  },
+  "context_menu": {
+    "quick_actions": {
+      "title": "クイックアクション"
+    },
+    "translation": {
+      "show_original": "原文を表示",
+      "translate_page_into": "このページを{language}に翻訳",
+      "translate_selected_text": "選択されたテキストを翻訳する"
+    },
+    "add_image": {
+      "title": "チャットに画像を追加"
+    },
+    "settings": {
+      "title": "設定"
+    }
+  },
+  "errors": {
+    "model_not_found": "おっと！何かが間違いました。設定で接続を確認してもう一度お試しください。",
+    "timeout_error": "操作がタイムアウトしました：{message}",
+    "unknown_error": "予期しないエラーが発生しました：{message}",
+    "model_request_error": "おっと！何かが間違いました。設定で接続を確認してもう一度お試しください。",
+    "model_request_timeout": "リクエストがタイムアウトしました。接続を確認するか、長いコンテキストが応答時間に影響する可能性があるため、新しいセッションを開始することを検討してください。",
+    "webllm_not_supported": "WebLLMはお使いのデバイスではサポートされていません。",
+    "max_characters_error": "最大 {count} 文字まで入力可能です"
+  },
+  "common": {
+    "cancel": "キャンセル",
+    "duration": {
+      "days": "{day}日 | {day}日",
+      "seconds": "{second}秒",
+      "minutes": "{minute}分 | {minute}分",
+      "hours": "{hour}時間",
+      "years": "{year}年 | {year}年",
+      "months": "{month}ヶ月 | {month}ヶ月"
+    },
+    "confirm": "確認",
+    "send": "送信"
+  },
+  "ollama": {
+    "sites": {
+      "add_to_nativemind": "TechieMindでの使用"
+    }
+  },
+  "popup": {
+    "reload_page": "ページを再読み込みしてTechieMindを使用してください。",
+    "page_not_supported": "このページはTechieMindでサポートされていません。",
+    "local_pdf_file_not_supported": "ブラウザの権限制限により、お使いのコンピュータのローカルファイルに直接アクセスすることができません。別のブラウザタブでプラグインを開き、ローカルPDFファイルを手動でアップロードしてください。"
+  },
+  "writing_tools": {
+    "processing": "処理中...",
+    "rewrite_suggestion": "書き直しの提案",
+    "sparkle_text": "文字の美化",
+    "key_points": "重要なポイント",
+    "grammar_and_style": "文法とスタイル",
+    "proofread": "校正",
+    "list": "リスト",
+    "sparkle": "美化",
+    "apply": "適用",
+    "dismiss": "却下する",
+    "rewrite": "書き直す"
+  },
+  "textarea": {
+    "reset_to_default": "デフォルトにリセット"
+  },
+  "tooltips": {
+    "clear_chat": "チャットをクリア",
+    "settings": "設定",
+    "pin_sidebar": "固定",
+    "unpin_sidebar": "固定を解除",
+    "close": "閉じる",
+    "chat_history": "歴史",
+    "new_chat": "新しいチャット",
+    "back": "戻る",
+    "copy_message": "メッセージをコピー",
+    "edit_message": "メッセージを編集",
+    "retry_message": "再試行"
+  },
+  "gmail_tools": {
+    "buttons": {
+      "ai_summary": "AI要約",
+      "ai_reply": "AI返信",
+      "ai_polish": "AI添削"
+    },
+    "modals": {
+      "open_sidebar_title": "サイドバーを開く必要があります",
+      "open_sidebar_description": "この機能を使用するには、TechieMind サイドバーを手動で開いてください。",
+      "confirm": "OK",
+      "close": "閉じる"
+    },
+    "cards": {
+      "reply": {
+        "title": "返信提案",
+        "processing": "処理中...",
+        "regenerate": "再生成",
+        "apply": "適用",
+        "language_selector": "言語",
+        "style_selector": "スタイル",
+        "copy_to_clipboard": "クリップボードにコピー"
+      },
+      "compose": {
+        "title": "AI作成",
+        "subject": "件名：",
+        "email_body": "メール本文：",
+        "processing": "処理中...",
+        "regenerate": "再生成",
+        "apply": "適用",
+        "language_selector": "言語",
+        "style_selector": "スタイル",
+        "copy_subject_to_clipboard": "件名をクリップボードにコピー",
+        "copy_body_to_clipboard": "本文をクリップボードにコピー",
+        "no_subject_generated": "件名が生成されませんでした"
+      },
+      "styles": {
+        "change_style": "スタイルを変更",
+        "formal": "フォーマル",
+        "friendly": "フレンドリー",
+        "urgent": "緊急"
+      },
+      "notifications": {
+        "copied_to_clipboard": "クリップボードにコピーしました！",
+        "subject_copied": "件名をクリップボードにコピーしました！",
+        "body_copied": "本文をクリップボードにコピーしました！",
+        "reply_applied": "返信を作成ボックスに適用しました！",
+        "email_content_applied": "メール内容を作成フィールドに適用しました！",
+        "no_content_to_apply": "適用するコンテンツがありません",
+        "no_compose_box_found": "作成ボックスが見つかりません",
+        "failed_to_copy": "クリップボードへのコピーに失敗しました",
+        "failed_to_apply_reply": "返信内容の適用に失敗しました",
+        "failed_to_apply_compose": "作成内容の適用に失敗しました"
+      },
+      "errors": {
+        "failed_to_summarize": "メールの要約に失敗しました：",
+        "failed_to_show_reply_card": "Gmail返信カードの表示に失敗しました：",
+        "failed_to_show_compose_card": "Gmail作成カードの表示に失敗しました：",
+        "failed_to_locate_reply_element": "返信作成要素の特定に失敗しました",
+        "error_generating_reply": "返信生成エラー：{error}",
+        "error_generating_compose": "作成内容生成エラー：{error}"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# Repository: https://github.com/Vikhyath-thelazycoder/TechieMind-On-device-browser-agent
+blank_issues_enabled: true
+templates:
+  bug_report:
+    name: "Bug Report"
+    description: "Report a bug or issue in the repository."
+    labels: ["bug"]
+  deploy_request:
+    name: "Deploy Request"
+    description: "Request a deployment of the repository."
+    labels: ["deploy"]

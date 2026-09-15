@@ -1,0 +1,30 @@
+{
+  "$schema": "https://unpkg.com/release-it@19/schema/release-it.json",
+  "hooks": {
+    "before:init": ["rm -rf .output/*.zip"],
+    "after:bump": ["pnpm zip:beta", "pnpm zip:beta:firefox"]
+  },
+  "git": {
+    "commitMessage": "chore(release): v${version}",
+    "tagName": "v${version}",
+    "tagAnnotation": "v${version}",
+    "commitArgs": ["--no-verify"]
+  },
+  "npm": {
+    "publish": false
+  },
+  "plugins": {
+    "release-it-changelogen": {
+      "disableVersion": true,
+      "templates": {
+        "commitMessage": "chore(release): v{{newVersion}}",
+        "tagMessage": "v{{newVersion}}",
+        "tagBody": "v{{newVersion}}"
+      }
+    }
+  },
+  "github": {
+    "release": true,
+    "assets": [".output/*.zip"]
+  }
+}

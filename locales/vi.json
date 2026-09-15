@@ -1,0 +1,536 @@
+{
+  "chat": {
+    "messages": {
+      "thought_for_seconds": "Suy nghĩ trong {second} giây | Suy nghĩ trong {second} giây",
+      "thinking": "Đang suy nghĩ...",
+      "reading": "Đang đọc...",
+      "search_locally": "Đang tìm kiếm trong trình duyệt...",
+      "used_model": "Đã sử dụng {model}"
+    },
+    "quick_actions": {
+      "title": "Thao tác nhanh"
+    },
+    "thinking_mode": {
+      "label": "Suy nghĩ",
+      "low": "Thấp",
+      "medium": "Trung bình",
+      "high": "Cao"
+    },
+    "input": {
+      "placeholder": {
+        "ask_anything": "Hỏi bất cứ điều gì...",
+        "ask_follow_up": "Hỏi tiếp theo..."
+      },
+      "attachment_selector": {
+        "all_tabs": "Tất cả các tab mở",
+        "upload_from_computer": "Tải lên từ máy tính của tôi",
+        "image_oversize": "Kích thước hình ảnh phải nhỏ hơn {size}",
+        "too_many_images": "Tối đa {max} tệp hình ảnh được phép",
+        "unsupported_image_type": "Định dạng hình ảnh không được hỗ trợ. Vui lòng tải lên tệp JPEG hoặc PNG.",
+        "unsupported_model": "Tải lên hình ảnh yêu cầu mô hình có khả năng thị giác. Vui lòng chuyển sang Gemma3 hoặc mô hình thị giác tương tự.",
+        "pdf_oversize": "Kích thước file PDF phải nhỏ hơn {size}",
+        "pdf_text_extract_error": "Trích xuất văn bản thất bại - tệp PDF này có thể được quét hoặc dựa trên hình ảnh.",
+        "too_many_pdfs": "Tối đa {max} tệp PDF được phép",
+        "pdf_page_count_exceeded": "PDF phải có ít hơn {max} trang",
+        "only_load_partial_pages": "Chỉ {max} trang đầu tiên được tải do kích thước tệp",
+        "selected_text_prefix": "Văn bản đã chọn:",
+        "captured_page_prefix": "Trang đã chụp:"
+      }
+    },
+    "prompt": {
+      "highlight_key_insights": {
+        "title": "Làm nổi bật những hiểu biết quan trọng"
+      },
+      "search_more": {
+        "title": "Tìm kiếm thêm nội dung như thế này"
+      },
+      "summarize_page_content": {
+        "title": "Tóm tắt trang"
+      }
+    },
+    "tool_calls": {
+      "common": {
+        "reading": "Đang đọc",
+        "read_failed": "Đọc thất bại: {error}",
+        "reading_success": "Đọc hoàn tất"
+      },
+      "search_online": {
+        "searching": "Đang tìm kiếm: \"{query}\"...",
+        "search_completed": "Tìm kiếm hoàn tất: \"{query}\"",
+        "search_failed": "Tìm kiếm thất bại: {query}"
+      },
+      "fetch_page": {
+        "error_no_content": "không tìm thấy nội dung"
+      },
+      "view_image": {
+        "analyzing": "Đang phân tích: {title}",
+        "analyze_failed": "Phân tích thất bại: {error}",
+        "analyze_success": "Hoàn thành phân tích: {title}",
+        "image_not_found": "ảnh không tìm thấy"
+      },
+      "view_pdf": {
+        "pdf_not_found": "PDF không tìm thấy"
+      },
+      "view_tab": {
+        "tab_not_found": "tab không tìm thấy"
+      },
+      "page_click": {
+        "click": "Nhấp {content}",
+        "error_can_not_click": "Không thể nhấp và chuyển đến {destination}",
+        "error_no_active_tab": "Không tìm thấy tab đang hoạt động",
+        "error_unable_to_jump": "Không thể nhấp và chuyển đến {destination}",
+        "redirected": "Đã chuyển hướng đến {destination}",
+        "error_click_before_view_tab": "Hãy thử nhấp vào một liên kết trang trước khi xem bất kỳ trang nào",
+        "error_click_incorrect_link": "Hãy thử nhấp vào liên kết trang không chính xác"
+      }
+    },
+    "tools": {
+      "online_search": {
+        "title": "Tìm kiếm"
+      }
+    },
+    "camera": {
+      "permission_reload_title": "Cần tải lại",
+      "permission_reload_description": "Sau khi cấp quyền, vui lòng kích hoạt lại tiện ích mở rộng TechieMind trong Firefox để bật tính năng chụp ảnh màn hình.",
+      "reload_extension": "Tải lại tiện ích mở rộng"
+    }
+  },
+  "chat_history": {
+    "delete_confirm": "Bạn có chắc chắn muốn xóa cuộc trò chuyện này không? Hành động này không thể hoàn tác.",
+    "delete": "Xóa bỏ",
+    "rename": "Đổi tên",
+    "unpin": "Bỏ ghim",
+    "pin": "Ghim",
+    "title": "Lịch sử Trò chuyện",
+    "pinned_section": "Chats Đã Ghim",
+    "recent_section": "Chats Gần Đây",
+    "empty_state": "Chưa có cuộc trò chuyện nào",
+    "untitled_chat": "Trò chuyện Không Tiêu đề",
+    "new_chat": "Trò chuyện Mới",
+    "save": "Lưu",
+    "cancel": "Hủy"
+  },
+  "onboarding": {
+    "banner": {
+      "description": "Riêng tư và an toàn, với các tính năng mạnh mẽ chạy hoàn toàn trong thiết bị của bạn.",
+      "title": "AI trên thiết bị, được xây dựng chỉ dành cho bạn"
+    },
+    "guide": {
+      "already_installed": "Đã cài đặt và chạy {endpointType}?",
+      "features": {
+        "1": "Chạy các mô hình tiên tiến như gpt-oss, DeepSeek, Qwen, Llama",
+        "2": "Tùy chỉnh và chuyển đổi các mô hình với toàn bộ điều khiển",
+        "3": "Dữ liệu của bạn vẫn riêng tư, trên thiết bị của bạn"
+      },
+      "follow_our_tutorial": "Thực hiện theo hướng dẫn cài đặt của chúng tôi",
+      "install_desc": "Bạn muốn chạy AI cục bộ như thế nào?",
+      "need_help": "Cần giúp đỡ?",
+      "setup": "Cài đặt",
+      "step1": "Bước 1",
+      "download_model_to_begin": "Tải xuống một mô hình để bắt đầu.",
+      "select_model_to_start": "Chọn và tải xuống một mô hình để bắt đầu",
+      "download_and_install": "Tải xuống & Cài đặt",
+      "choose_model": "Chọn Mô hình",
+      "no_sure_which_one": "🤔 Không chắc chọn cái nào?",
+      "learn_about_models": "Tìm hiểu về các mô hình",
+      "looking_for_more_options": "🔍 Đang tìm kiếm thêm tùy chọn?",
+      "browse_more_models": "Duyệt qua các mô hình khác",
+      "get_endpoint": "Lấy {endpointType}",
+      "lm_studio_select_desc": "Ứng dụng Desktop dễ sử dụng",
+      "ollama_select_desc": "Công cụ Phát triển Chuyên nghiệp",
+      "unlock_full_power_with": "Mở khóa toàn bộ sức mạnh AI cục bộ với {endpointType}."
+    },
+    "webllm_tutorial": {
+      "desc": "Sử dụng mô hình nhẹ (QWEN 0,6B) ngay trong trình duyệt của bạn - không thiết lập, không chờ đợi.",
+      "not_support_webllm": "WEBLLM không được hỗ trợ trên thiết bị của bạn",
+      "start_with_webllm": "Bắt đầu với mô hình web",
+      "title": "Chưa sẵn sàng cài đặt? \nHãy thử ngay bây giờ."
+    },
+    "welcome_msg": {
+      "title": "👋 Chào mừng bạn đến với **TechieMind**",
+      "body": "TechieMind chạy hoàn toàn trên thiết bị của bạn, giữ cho mọi cuộc trò chuyện riêng tư và an toàn.\n\nĐây là những gì bạn có thể làm:\n- Trò chuyện qua các tab và giữ nguyên ngữ cảnh khi bạn duyệt web.\n- Tóm tắt, tìm kiếm và dịch bất kỳ trang web nào trên máy.\n- Sử dụng các Tác nhân thông minh để viết, nghiên cứu hoặc phân tích sâu.\n- Tải lên PDF hoặc hình ảnh để hiểu ngay lập tức trên thiết bị.\n\nBạn có thể bắt đầu bằng cách thử các thao tác nhanh bên dưới."
+    },
+    "ollama_is_running": "Ollama đang chạy",
+    "backend_is_running": "{endpointType} đang chạy"
+  },
+  "settings": {
+    "cache": {
+      "title": "Bộ nhớ đệm Dịch thuật",
+      "enable": "Bật Bộ nhớ đệm",
+      "enabled": "Đã bật",
+      "disabled": "Đã tắt",
+      "max_size": "Kích thước Tối đa",
+      "retention_days": "Thời gian Lưu trữ",
+      "days": "ngày"
+    },
+    "advanced": {
+      "title": "Nâng cao"
+    },
+    "choose_model": "Chọn Mô hình",
+    "download": "Tải xuống",
+    "feedback": {
+      "contact_msg": "📧 Có câu hỏi hay phản hồi? Tham gia {discord} của chúng tôi hoặc gửi email cho chúng tôi tại {email}.",
+      "join_waitlist": "💼 Muốn sử dụng tại nơi làm việc? {join_waitlist_link} để nhận cập nhật doanh nghiệp.",
+      "join_waitlist_link": "Tham gia danh sách chờ",
+      "discord": "Discord"
+    },
+    "get_ollama": "Nhận Ollama",
+    "models": {
+      "title": "Mô hình",
+      "discover_more": "Khám phá thêm các mô hình",
+      "no_model": "⚠️ Không có mô hình",
+      "add_model_to_start": "Thêm một mô hình để bắt đầu",
+      "ollama_models": "Các Mô hình Ollama ({count})",
+      "lmstudio_models": "LM Studio Models ({count}) → Các Mô hình LM Studio ({count})"
+    },
+    "ollama": {
+      "already_installed": "Bạn đã cài đặt và chạy Ollama?",
+      "connected": "Kết nối",
+      "connection_error": "Lỗi kết nối",
+      "downloadable_model": "Mô hình có thể tải xuống",
+      "follow_guide": "Thực hiện theo hướng dẫn cài đặt của chúng tôi",
+      "learn_more_about_models": "Tìm hiểu thêm về các mô hình",
+      "need_help": "Cần giúp đỡ?",
+      "re_scan": "Quét lại",
+      "server_address": "Địa chỉ máy chủ",
+      "setup": "Cài đặt",
+      "unconnected": "Không kết nối",
+      "context_window_size": "Kích thước cửa sổ ngữ cảnh",
+      "custom_context_window_size": "Kích thước cửa sổ ngữ cảnh tùy chỉnh",
+      "context_window_size_desc": "Nhập kích thước cửa sổ ngữ cảnh tùy chỉnh theo token (tối thiểu: 512)",
+      "server_address_desc": "Điểm cuối API máy chủ Ollama",
+      "context_window_size_error": "Kích thước cửa sổ ngữ cảnh phải có ít nhất {min} token",
+      "unload": "Dỡ tải",
+      "expires_in": "Hết hạn trong {duration}",
+      "running": "Chạy",
+      "running_models": "Mô hình đang chạy",
+      "model_management": "Quản lý Mô hình",
+      "downloaded_models": "Các Mô hình Đã tải xuống"
+    },
+    "prompts": {
+      "chat_system_prompt": "Nhắc hệ thống trò chuyện",
+      "title": "Nhắc nhở",
+      "translation_system_prompt": "Prompt hệ thống dịch thuật"
+    },
+    "quick_actions": {
+      "description": "Thiết lập các thao tác nhanh để chạy lời nhắc yêu thích của bạn nhanh hơn - từ trò chuyện mới hoặc menu chuột phải.",
+      "edit": {
+        "cancel": "Hủy bỏ",
+        "prompt": "Lời nhắc",
+        "reset": "Đặt lại",
+        "save": "Lưu",
+        "show_in_context_menu": "Hiển thị trong menu chuột phải",
+        "title": "Tiêu đề"
+      },
+      "title": "Tùy chỉnh thao tác nhanh"
+    },
+    "test": "Bài kiểm tra",
+    "translation": {
+      "title": "Ngôn ngữ dịch",
+      "description": "Cấu hình chức năng dịch thuật và ngôn ngữ đích",
+      "basic_config": {
+        "target_language": "Ngôn ngữ đích",
+        "target_language_desc": "Chọn ngôn ngữ đích để dịch",
+        "title": "Cấu hình cơ bản",
+        "translation_model": "Mô hình dịch thuật",
+        "translation_model_desc": "Chọn mô hình AI cho các tác vụ dịch thuật",
+        "translation_system_prompt": "Prompt hệ thống dịch thuật",
+        "translation_system_prompt_desc": "Xác định hành vi AI và định dạng đầu ra trong quá trình dịch thuật",
+        "translation_system_prompt_error": "lời nhắc hệ thống phải chứa {'{{LANGUAGE}}'}"
+      }
+    },
+    "webllm-desc": "Bạn hiện đang sử dụng WebLLM: qwen3:0.6b để dùng thử nhanh. Để có hỗ trợ mô hình đầy đủ và hiệu suất tốt hơn, vui lòng cài đặt Ollama.",
+    "general": {
+      "system_language": "Ngôn ngữ hệ thống",
+      "title": "Tổng quan",
+      "description": "Cấu hình cài đặt cơ bản và kết nối máy chủ",
+      "discover_more_models": "Khám phá thêm các mô hình",
+      "refresh_status": "Làm mới Trạng thái",
+      "unload_model_confirm": "Bạn có chắc chắn muốn gỡ bỏ mô hình \"{model}\" không?",
+      "running_models": {
+        "vram": "{size} VRAM",
+        "params": "{size} tham số",
+        "quant": "{level} định lượng",
+        "thinking": "Suy nghĩ",
+        "no_active_models": "Ollama đã kết nối, nhưng không có mô hình nào đang hoạt động",
+        "not_connected_to_ollama": "Không kết nối với Ollama",
+        "lm_studio_no_active_models": "LM Studio đã kết nối, nhưng không có mô hình nào đang hoạt động",
+        "not_connected_to_lm_studio": "Không kết nối với LM Studio"
+      },
+      "delete_model_confirm": "Bạn có chắc chắn muốn xóa mô hình \"{model}\" không?"
+    },
+    "title": "Cài đặt",
+    "model_downloader": {
+      "description": "Mô hình này cần được tải xuống trước khi sử dụng. Quá trình tải xuống có thể mất vài phút.",
+      "downloading_model": "Đang tải xuống \"{model}\"",
+      "download_model": "Tải xuống \"{model}\"",
+      "downloading": "Mô hình của bạn đang được tải xuống. Vui lòng đợi…",
+      "download": "Tải xuống",
+      "retry": "Thử lại",
+      "unable_to_download": "Không thể bắt đầu tải xuống",
+      "could_not_connect": "Chúng tôi không thể kết nối tới {endpointType}. Vui lòng đảm bảo {endpointType} đang chạy và thử lại."
+    },
+    "webllm_downloader": {
+      "description": "Để sử dụng chế độ Cục bộ, bạn cần tải xuống mô hình {model} ({size}). Bạn có muốn tải xuống ngay bây giờ không?"
+    },
+    "writing_tools": {
+      "title": "Công cụ Viết",
+      "basic_config": {
+        "enable": "Bật Công cụ Viết",
+        "enable_desc": "Hiển thị các tùy chọn hỗ trợ viết khi văn bản được chọn",
+        "title": "Cài đặt cơ bản"
+      },
+      "description": "Cấu hình các tính năng hỗ trợ viết khác nhau",
+      "tool_config": {
+        "at_least_one_tool_error": "Phải chọn ít nhất một công cụ viết.",
+        "list": {
+          "description": "Chuyển đổi nội dung thành các danh sách rõ ràng, có tổ chức",
+          "title": "Danh sách"
+        },
+        "proofread": {
+          "description": "Kiểm tra lỗi ngữ pháp, chính tả và dấu câu",
+          "title": "Đọc lại và sửa lỗi"
+        },
+        "rewrite": {
+          "description": "Cải thiện độ rõ ràng và tính mạch lạc của văn bản",
+          "title": "Viết lại"
+        },
+        "sparkle": {
+          "description": "Thêm emoji và các yếu tố hình ảnh",
+          "title": "Làm đẹp"
+        },
+        "title": "Cấu hình Công cụ"
+      }
+    },
+    "chat": {
+      "title": "Trò chuyện",
+      "description": "Cấu hình chức năng trò chuyện và các hành động nhanh",
+      "basic_config": {
+        "title": "Cấu hình cơ bản",
+        "chat_model": "Mô hình chat",
+        "chat_model_description": "Chọn mô hình AI cho các cuộc trò chuyện",
+        "chat_system_prompt": "Hệ thống Nhắc nhở Trò chuyện",
+        "chat_system_prompt_description": "Xác định hành vi và vai trò của AI trong các cuộc trò chuyện",
+        "thinking_visibility": "Hiển thị Quá trình Suy nghĩ",
+        "thinking_visibility_description": "Chọn cách hiển thị quá trình suy nghĩ trong quá trình lý luận LLM",
+        "thinking_visibility_hide": "Ẩn Suy nghĩ",
+        "thinking_visibility_hide_description": "Chỉ hiển thị loading và câu trả lời cuối cùng",
+        "thinking_visibility_preview": "Xem trước Suy nghĩ",
+        "thinking_visibility_preview_description": "Hiển thị 2 dòng cuối, có thể mở rộng",
+        "thinking_visibility_full": "Hiển thị Suy nghĩ Đầy đủ",
+        "thinking_visibility_full_description": "Hiển thị tất cả theo mặc định, có thể thu gọn"
+      },
+      "quick_actions": {
+        "title": "Hành động nhanh",
+        "reset_to_default": "Đặt lại về Mặc định",
+        "reset_to_default_confirm": "Bạn có chắc chắn muốn đặt lại Thao tác Nhanh về giá trị mặc định không?"
+      }
+    },
+    "common": {
+      "saved": "Đã lưu"
+    },
+    "interface": {
+      "title": "Giao diện",
+      "interface_language": "Ngôn ngữ giao diện",
+      "theme": "Giao diện",
+      "theme_light": "Sáng",
+      "theme_dark": "Tối",
+      "theme_system": "Hệ thống"
+    },
+    "header": {
+      "starts_on_github": "Sao trên GitHub",
+      "goto_website": "Đi đến Trang web"
+    },
+    "providers": {
+      "lm_studio": {
+        "title": "Cấu hình LM Studio",
+        "already_installed": "Đã cài đặt và chạy LM Studio chưa?",
+        "model_management_desc": "Việc tải xuống, tải và xóa mô hình phải được thực hiện trong ứng dụng desktop LM Studio. Đây chỉ hiển thị trạng thái đang chạy hiện tại."
+      },
+      "ollama": {
+        "title": "Cấu hình Ollama"
+      }
+    },
+    "get_lm_studio": "Tải LM Studio",
+    "delete": "Xóa",
+    "lm_studio": {
+      "server_address": "Địa chỉ máy chủ",
+      "server_address_desc": "Điểm cuối API máy chủ LM Studio"
+    },
+    "webllm_desc_lm_studio": "Bạn hiện đang sử dụng WebLLM: qwen3:0.6b để dùng thử nhanh. Để có hỗ trợ mô hình đầy đủ và hiệu suất tốt hơn, vui lòng cài đặt LM Studio.",
+    "gmail_tools": {
+      "title": "Công cụ Gmail",
+      "description": "Cấu hình các tính năng hỗ trợ viết khác nhau",
+      "basic_config": {
+        "title": "Cài đặt cơ bản",
+        "enable": "Bật công cụ Gmail",
+        "enable_desc": "Hiển thị các tính năng hỗ trợ AI trực tiếp trong Gmail.",
+        "output_language": "Ngôn ngữ đầu ra",
+        "output_language_desc": "Chọn ngôn ngữ mặc định cho email được tạo bởi AI.",
+        "output_style": "Phong cách đầu ra",
+        "output_style_desc": "Chọn tông giọng mặc định cho email của bạn",
+        "options": {
+          "auto": "Tự động",
+          "default": "Mặc định"
+        }
+      },
+      "system_prompt": {
+        "title": "Prompt hệ thống",
+        "summarize": {
+          "title": "Tóm tắt",
+          "description": "Nhanh chóng trích xuất các điểm chính từ email dài hoặc chuỗi thảo luận."
+        },
+        "reply": {
+          "title": "Trả lời",
+          "description": "Ngay lập tức soạn thảo phản hồi tự nhiên dựa trên nội dung email và ghi chú của bạn."
+        },
+        "compose": {
+          "title": "Soạn thảo",
+          "description": "Bắt đầu từ đầu hoặc hoàn thiện bản thảo của bạn."
+        },
+        "reset_to_default": "Đặt lại về mặc định",
+        "reset_to_default_confirm": "Bạn có chắc chắn muốn đặt lại {setting} về giá trị mặc định không?"
+      }
+    }
+  },
+  "context_menu": {
+    "quick_actions": {
+      "title": "Thao tác nhanh"
+    },
+    "translation": {
+      "show_original": "Hiển thị bản gốc",
+      "translate_page_into": "Dịch trang này thành {language}",
+      "translate_selected_text": "Dịch văn bản đã chọn"
+    },
+    "add_image": {
+      "title": "Thêm Hình Ảnh vào Cuộc Trò Chuyện"
+    },
+    "settings": {
+      "title": "Cài đặt"
+    }
+  },
+  "errors": {
+    "model_not_found": "Ôi! Đã xảy ra lỗi. Vui lòng kiểm tra kết nối trong cài đặt và thử lại.",
+    "model_request_error": "Ôi! Đã xảy ra lỗi. Vui lòng kiểm tra kết nối trong cài đặt và thử lại.",
+    "model_request_timeout": "Hết thời gian chờ yêu cầu, vui lòng kiểm tra kết nối của bạn hoặc cân nhắc bắt đầu phiên mới vì ngữ cảnh dài có thể ảnh hưởng đến thời gian phản hồi.",
+    "timeout_error": "Thao tác đã hết thời gian: {message}",
+    "unknown_error": "Đã xảy ra lỗi không xác định: {message}",
+    "webllm_not_supported": "WebLLM không được hỗ trợ trên thiết bị của bạn.",
+    "max_characters_error": "Tối đa {count} ký tự được phép"
+  },
+  "common": {
+    "cancel": "Hủy",
+    "duration": {
+      "days": "{day} ngày | {day} ngày",
+      "seconds": "{second} giây | {second} giây",
+      "minutes": "{minute} phút | {minute} phút",
+      "hours": "{hour} giờ | {hour} giờ",
+      "years": "{year} năm | {year} năm",
+      "months": "{month} tháng | {month} tháng"
+    },
+    "confirm": "Xác nhận",
+    "send": "Gửi"
+  },
+  "ollama": {
+    "sites": {
+      "add_to_nativemind": "Sử dụng trong TechieMind"
+    }
+  },
+  "popup": {
+    "reload_page": "Vui lòng tải lại trang để sử dụng TechieMind.",
+    "page_not_supported": "Trang này không được hỗ trợ bởi TechieMind.",
+    "local_pdf_file_not_supported": "Do hạn chế quyền của trình duyệt, chúng tôi không thể truy cập trực tiếp các tệp cục bộ trên máy tính của bạn. Vui lòng mở plugin trong tab trình duyệt khác và tải lên tệp PDF cục bộ theo cách thủ công."
+  },
+  "writing_tools": {
+    "processing": "Đang xử lý...",
+    "rewrite_suggestion": "Gợi ý viết lại",
+    "sparkle_text": "Làm đẹp văn bản",
+    "key_points": "Những Điểm Chính",
+    "grammar_and_style": "Ngữ pháp & Phong cách",
+    "proofread": "Đọc lại và sửa lỗi",
+    "list": "Danh sách",
+    "sparkle": "Làm đẹp",
+    "rewrite": "Viết lại",
+    "apply": "Áp dụng",
+    "dismiss": "Bỏ qua"
+  },
+  "textarea": {
+    "reset_to_default": "Đặt lại về mặc định"
+  },
+  "tooltips": {
+    "clear_chat": "Xóa trò chuyện",
+    "settings": "Cài đặt",
+    "pin_sidebar": "Ghim",
+    "unpin_sidebar": "Bỏ ghim",
+    "close": "Đóng",
+    "chat_history": "Lịch sử",
+    "new_chat": "Trò chuyện mới",
+    "back": "Quay lại",
+    "copy_message": "Sao chép tin nhắn",
+    "edit_message": "Chỉnh sửa tin nhắn",
+    "retry_message": "Thử lại"
+  },
+  "gmail_tools": {
+    "buttons": {
+      "ai_summary": "Tóm tắt AI",
+      "ai_reply": "Trả lời AI",
+      "ai_polish": "Hoàn thiện AI"
+    },
+    "modals": {
+      "open_sidebar_title": "Cần mở thanh bên",
+      "open_sidebar_description": "Vui lòng mở thanh bên TechieMind theo cách thủ công để sử dụng tính năng này.",
+      "confirm": "OK",
+      "close": "Đóng"
+    },
+    "cards": {
+      "reply": {
+        "title": "Gợi ý trả lời",
+        "processing": "Đang xử lý...",
+        "regenerate": "Tạo lại",
+        "apply": "Áp dụng",
+        "language_selector": "Ngôn ngữ",
+        "style_selector": "Phong cách",
+        "copy_to_clipboard": "Sao chép vào clipboard"
+      },
+      "compose": {
+        "title": "Soạn thảo AI",
+        "subject": "Chủ đề:",
+        "email_body": "Nội dung email:",
+        "processing": "Đang xử lý...",
+        "regenerate": "Tạo lại",
+        "apply": "Áp dụng",
+        "language_selector": "Ngôn ngữ",
+        "style_selector": "Phong cách",
+        "copy_subject_to_clipboard": "Sao chép chủ đề vào clipboard",
+        "copy_body_to_clipboard": "Sao chép nội dung vào clipboard",
+        "no_subject_generated": "Không có chủ đề được tạo"
+      },
+      "styles": {
+        "change_style": "Thay đổi phong cách",
+        "formal": "Trang trọng",
+        "friendly": "Thân thiện",
+        "urgent": "Khẩn cấp"
+      },
+      "notifications": {
+        "copied_to_clipboard": "Đã sao chép vào clipboard!",
+        "subject_copied": "Chủ đề đã được sao chép vào clipboard!",
+        "body_copied": "Nội dung đã được sao chép vào clipboard!",
+        "reply_applied": "Phản hồi đã được áp dụng vào hộp soạn thảo!",
+        "email_content_applied": "Nội dung email đã được áp dụng vào các trường soạn thảo!",
+        "no_content_to_apply": "Không có nội dung để áp dụng",
+        "no_compose_box_found": "Không tìm thấy hộp soạn thảo",
+        "failed_to_copy": "Sao chép vào clipboard thất bại",
+        "failed_to_apply_reply": "Áp dụng nội dung trả lời thất bại",
+        "failed_to_apply_compose": "Áp dụng nội dung soạn thảo thất bại"
+      },
+      "errors": {
+        "failed_to_summarize": "Tóm tắt email thất bại:",
+        "failed_to_show_reply_card": "Hiển thị thẻ trả lời Gmail thất bại:",
+        "failed_to_show_compose_card": "Hiển thị thẻ soạn thảo Gmail thất bại:",
+        "failed_to_locate_reply_element": "Không thể định vị phần tử soạn thảo trả lời",
+        "error_generating_reply": "Lỗi tạo phản hồi: {error}",
+        "error_generating_compose": "Lỗi tạo nội dung soạn thảo: {error}"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "./.wxt/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "types": ["@webgpu/types"],
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false
+  }
+}

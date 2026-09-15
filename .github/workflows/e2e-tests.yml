@@ -1,0 +1,57 @@
+# Repository: https://github.com/Vikhyath-thelazycoder/TechieMind-On-device-browser-agent
+name: E2E Tests
+on:
+  push:
+    branches: "*"
+    paths:
+      - "**/*.ts"
+      - "**/*.js"
+      - "**/*.vue"
+  pull_request:
+    branches: [main]
+    paths:
+      - "**/*.ts"
+      - "**/*.js"
+      - "**/*.vue"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: E2E Tests
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: |
+          pnpm install --frozen-lockfile
+
+      - name: Install Playwright Browsers
+        run: pnpm exec playwright install --with-deps
+
+      - name: Build production assets
+        run: |
+          pnpm run build:prod
+
+      - name: Run E2E tests
+        run: |
+          pnpm run test:e2e

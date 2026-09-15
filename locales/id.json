@@ -1,0 +1,536 @@
+{
+  "chat": {
+    "messages": {
+      "thought_for_seconds": "Berpikir selama {second} detik | Berpikir selama {second} detik",
+      "thinking": "Sedang berpikir...",
+      "reading": "Sedang membaca...",
+      "search_locally": "Mencari secara lokal di browser...",
+      "used_model": "Menggunakan {model}"
+    },
+    "quick_actions": {
+      "title": "Tindakan cepat"
+    },
+    "thinking_mode": {
+      "label": "Berpikir",
+      "low": "Rendah",
+      "medium": "Sedang",
+      "high": "Tinggi"
+    },
+    "input": {
+      "placeholder": {
+        "ask_anything": "Tanyakan apa saja...",
+        "ask_follow_up": "Ajukan pertanyaan lanjutan..."
+      },
+      "attachment_selector": {
+        "all_tabs": "Semua tab terbuka",
+        "upload_from_computer": "Unggah dari komputer saya",
+        "image_oversize": "Ukuran gambar harus kurang dari {size}",
+        "too_many_images": "Maksimal {max} file gambar diizinkan",
+        "unsupported_image_type": "Format gambar tidak didukung. Silakan unggah file JPEG atau PNG.",
+        "unsupported_model": "Unggah gambar memerlukan model yang mampu memproses visual. Silakan beralih ke Gemma3 atau model visual serupa.",
+        "pdf_oversize": "Ukuran file PDF harus kurang dari {size}",
+        "pdf_text_extract_error": "Ekstraksi teks gagal - PDF ini mungkin hasil scan atau berbasis gambar.",
+        "too_many_pdfs": "Maksimal {max} file PDF diizinkan",
+        "pdf_page_count_exceeded": "PDF harus kurang dari {max} halaman",
+        "only_load_partial_pages": "Hanya {max} halaman pertama yang dimuat karena ukuran file",
+        "selected_text_prefix": "Teks terpilih:",
+        "captured_page_prefix": "Halaman tertangkap:"
+      }
+    },
+    "prompt": {
+      "highlight_key_insights": {
+        "title": "Sorot wawasan kunci"
+      },
+      "search_more": {
+        "title": "Cari lebih banyak konten seperti ini"
+      },
+      "summarize_page_content": {
+        "title": "Ringkas halaman"
+      }
+    },
+    "tool_calls": {
+      "common": {
+        "reading": "Sedang membaca",
+        "read_failed": "Gagal membaca: {error}",
+        "reading_success": "Pembacaan selesai"
+      },
+      "search_online": {
+        "searching": "Mencari: \"{query}\"...",
+        "search_completed": "Pencarian selesai: \"{query}\"",
+        "search_failed": "Pencarian gagal: {query}"
+      },
+      "fetch_page": {
+        "error_no_content": "tidak ada konten yang ditemukan"
+      },
+      "view_image": {
+        "analyzing": "Menganalisis: {title}",
+        "analyze_failed": "Analisis gagal: {error}",
+        "analyze_success": "Analisis selesai: {title}",
+        "image_not_found": "gambar tidak ditemukan"
+      },
+      "view_pdf": {
+        "pdf_not_found": "PDF tidak ditemukan"
+      },
+      "view_tab": {
+        "tab_not_found": "tab tidak ditemukan"
+      },
+      "page_click": {
+        "click": "Klik {content}",
+        "error_can_not_click": "Tidak dapat mengklik dan melompat ke {destination}",
+        "error_no_active_tab": "Tidak ditemukan tab aktif",
+        "error_unable_to_jump": "Tidak dapat mengklik dan melompat ke {destination}",
+        "redirected": "Dialihkan ke {destination}",
+        "error_click_before_view_tab": "Coba klik tautan halaman sebelum melihat halaman apa pun",
+        "error_click_incorrect_link": "Coba klik pada tautan halaman yang salah"
+      }
+    },
+    "tools": {
+      "online_search": {
+        "title": "Cari"
+      }
+    },
+    "camera": {
+      "permission_reload_title": "Muat ulang diperlukan",
+      "permission_reload_description": "Setelah memberikan izin, silakan aktifkan kembali ekstensi TechieMind di Firefox untuk mengaktifkan fitur tangkapan layar.",
+      "reload_extension": "Muat ulang ekstensi"
+    }
+  },
+  "chat_history": {
+    "delete_confirm": "Apakah Anda yakin ingin menghapus percakapan ini? Tindakan ini tidak dapat dibatalkan.",
+    "delete": "Menghapus",
+    "rename": "Ganti nama",
+    "unpin": "Lepas Pin",
+    "pin": "Pin",
+    "title": "Riwayat Obrolan",
+    "pinned_section": "Chat Dipasang",
+    "recent_section": "Chat Terbaru",
+    "empty_state": "Belum ada percakapan",
+    "untitled_chat": "Obrolan Tanpa Judul",
+    "new_chat": "Obrolan Baru",
+    "save": "Simpan",
+    "cancel": "Batal"
+  },
+  "onboarding": {
+    "banner": {
+      "description": "Privat dan aman, dengan fitur-fitur canggih yang sepenuhnya berjalan di perangkat Anda.",
+      "title": "AI di perangkat, dibuat khusus untuk Anda"
+    },
+    "guide": {
+      "already_installed": "Sudah terinstal dan menjalankan {endpointType}?",
+      "features": {
+        "1": "Jalankan model canggih seperti gpt-oss, DeepSeek, Qwen, Llama",
+        "2": "Sesuaikan dan beralih antar model dengan kontrol penuh",
+        "3": "Data Anda tetap pribadi, tersimpan di perangkat Anda"
+      },
+      "follow_our_tutorial": "Ikuti panduan instalasi kami",
+      "install_desc": "Bagaimana Anda ingin menjalankan AI secara lokal?",
+      "need_help": "Butuh bantuan?",
+      "setup": "Pengaturan",
+      "step1": "LANGKAH 1",
+      "download_model_to_begin": "Unduh model untuk memulai.",
+      "select_model_to_start": "Pilih dan unduh model untuk memulai",
+      "download_and_install": "Unduh & Instal",
+      "choose_model": "Pilih Model",
+      "no_sure_which_one": "🤔 Tidak yakin yang mana yang dipilih?",
+      "learn_about_models": "Pelajari tentang model",
+      "looking_for_more_options": "🔍 Mencari lebih banyak opsi?",
+      "browse_more_models": "Jelajahi lebih banyak model",
+      "get_endpoint": "Dapatkan {endpointType}",
+      "lm_studio_select_desc": "Aplikasi Desktop yang Mudah Digunakan",
+      "ollama_select_desc": "Alat Pengembang Profesional",
+      "unlock_full_power_with": "Buka kekuatan AI lokal penuh dengan {endpointType}."
+    },
+    "webllm_tutorial": {
+      "desc": "Gunakan model ringan (Qwen 0.6b) langsung di browser Anda — tanpa pengaturan, tanpa menunggu.",
+      "not_support_webllm": "WebLLM tidak didukung di perangkat Anda",
+      "start_with_webllm": "Mulai dengan Model Web",
+      "title": "Belum siap untuk menginstal? Coba langsung sekarang."
+    },
+    "welcome_msg": {
+      "title": "👋 Selamat datang di **TechieMind**",
+      "body": "TechieMind berjalan sepenuhnya di perangkat Anda, menjaga setiap obrolan tetap privat dan aman.\n\nBerikut yang dapat Anda lakukan:\n- Mengobrol di berbagai tab dan menjaga konteks saat Anda menjelajah.\n- Meringkas, mencari, dan menerjemahkan halaman web apa pun secara lokal.\n- Menggunakan Agen cerdas untuk menulis, riset, atau analisis mendalam.\n- Mengunggah PDF atau gambar untuk pemahaman instan di perangkat.\n\nAnda dapat memulai dengan mencoba tindakan cepat di bawah ini."
+    },
+    "ollama_is_running": "Ollama sedang berjalan",
+    "backend_is_running": "{endpointType} sedang berjalan"
+  },
+  "settings": {
+    "cache": {
+      "title": "Cache Terjemahan",
+      "enable": "Aktifkan Cache",
+      "enabled": "Diaktifkan",
+      "disabled": "Dinonaktifkan",
+      "max_size": "Ukuran Maksimal",
+      "retention_days": "Periode Penyimpanan",
+      "days": "hari"
+    },
+    "advanced": {
+      "title": "Canggih"
+    },
+    "choose_model": "Pilih Model",
+    "download": "Unduh",
+    "feedback": {
+      "contact_msg": "📧 Ada pertanyaan atau masukan? Bergabunglah dengan {discord} kami atau kirim email ke {email}.",
+      "join_waitlist": "💼 Ingin menggunakannya di tempat kerja? {join_waitlist_link} untuk mendapatkan pembaruan perusahaan.",
+      "join_waitlist_link": "Bergabung dengan daftar tunggu",
+      "discord": "Discord"
+    },
+    "get_ollama": "Dapatkan Ollama",
+    "models": {
+      "title": "Model",
+      "discover_more": "Temukan lebih banyak model",
+      "no_model": "⚠️ Tidak ada model",
+      "add_model_to_start": "Tambahkan model untuk memulai",
+      "ollama_models": "Model Ollama ({count})",
+      "lmstudio_models": "Model LM Studio ({count})"
+    },
+    "ollama": {
+      "already_installed": "Sudah menginstal dan menjalankan Ollama?",
+      "connected": "Terhubung",
+      "connection_error": "Kesalahan koneksi",
+      "downloadable_model": "Model yang dapat diunduh",
+      "follow_guide": "Ikuti panduan instalasi kami",
+      "learn_more_about_models": "Pelajari lebih lanjut tentang model",
+      "need_help": "Butuh bantuan?",
+      "re_scan": "Pindai ulang",
+      "server_address": "Alamat server",
+      "setup": "Pengaturan",
+      "unconnected": "Tidak terhubung",
+      "context_window_size": "Ukuran jendela konteks",
+      "custom_context_window_size": "Ukuran jendela konteks kustom",
+      "context_window_size_desc": "Masukkan ukuran jendela konteks kustom dalam token (minimum: 512)",
+      "server_address_desc": "Endpoint API server Ollama",
+      "context_window_size_error": "Ukuran jendela konteks harus minimal {min} token",
+      "unload": "Bongkar",
+      "expires_in": "Berakhir dalam {duration}",
+      "running": "Berjalan",
+      "running_models": "Model yang Berjalan",
+      "model_management": "Manajemen Model",
+      "downloaded_models": "Model yang Diunduh"
+    },
+    "prompts": {
+      "chat_system_prompt": "Prompt sistem obrolan",
+      "title": "Prompt",
+      "translation_system_prompt": "Prompt sistem terjemahan"
+    },
+    "quick_actions": {
+      "description": "Siapkan tindakan cepat untuk menjalankan prompt favorit Anda lebih cepat -- dari Obrolan Baru atau menu klik kanan.",
+      "edit": {
+        "cancel": "Batal",
+        "prompt": "Prompt",
+        "reset": "Atur ulang",
+        "save": "Simpan",
+        "show_in_context_menu": "Tampilkan di menu klik kanan",
+        "title": "Judul"
+      },
+      "title": "Kustomisasi tindakan cepat"
+    },
+    "test": "Tes",
+    "translation": {
+      "title": "Bahasa terjemahan",
+      "description": "Konfigurasi fungsionalitas terjemahan dan bahasa target",
+      "basic_config": {
+        "target_language": "Bahasa target",
+        "target_language_desc": "Pilih bahasa target untuk terjemahan",
+        "title": "Konfigurasi Dasar",
+        "translation_model": "Model terjemahan",
+        "translation_model_desc": "Pilih model AI untuk tugas terjemahan",
+        "translation_system_prompt": "Prompt sistem terjemahan",
+        "translation_system_prompt_desc": "Tentukan perilaku AI dan format output selama penerjemahan",
+        "translation_system_prompt_error": "Perintah sistem harus mengandung {'{{LANGUAGE}}'}"
+      }
+    },
+    "webllm-desc": "Anda sekarang menggunakan WebLLM: qwen3:0.6b untuk percobaan cepat. Untuk dukungan model lengkap dan performa yang lebih baik, silakan instal Ollama.",
+    "general": {
+      "system_language": "Bahasa sistem",
+      "title": "Umum",
+      "description": "Konfigurasi pengaturan dasar dan koneksi server",
+      "discover_more_models": "Temukan Lebih Banyak Model",
+      "refresh_status": "Segarkan Status",
+      "unload_model_confirm": "Apakah Anda yakin ingin membongkar model \"{model}\"?",
+      "running_models": {
+        "vram": "{size} VRAM",
+        "params": "{size} parameter",
+        "quant": "{level} kuant",
+        "thinking": "Berpikir",
+        "no_active_models": "Ollama terhubung, tetapi tidak ada model yang aktif",
+        "not_connected_to_ollama": "Tidak terhubung ke Ollama",
+        "lm_studio_no_active_models": "LM Studio terhubung, tetapi tidak ada model yang aktif",
+        "not_connected_to_lm_studio": "Tidak terhubung ke LM Studio"
+      },
+      "delete_model_confirm": "Apakah Anda yakin ingin menghapus model \"{model}\"?"
+    },
+    "title": "Pengaturan",
+    "model_downloader": {
+      "description": "Model ini perlu diunduh sebelum digunakan. Pengunduhan mungkin memerlukan waktu beberapa menit.",
+      "downloading_model": "Mengunduh \"{model}\"",
+      "download_model": "Unduh \"{model}\"",
+      "downloading": "Model Anda sedang diunduh. Mohon tunggu…",
+      "download": "Unduh",
+      "retry": "Coba lagi",
+      "unable_to_download": "Tidak Dapat Memulai Unduhan",
+      "could_not_connect": "Kami tidak dapat terhubung ke {endpointType}. Pastikan {endpointType} sedang berjalan dan coba lagi."
+    },
+    "webllm_downloader": {
+      "description": "Untuk menggunakan mode Lokal, Anda perlu mengunduh model {model} ({size}). Apakah Anda ingin mengunduhnya sekarang?"
+    },
+    "writing_tools": {
+      "title": "Alat Tulis",
+      "basic_config": {
+        "enable": "Aktifkan Alat Tulis",
+        "enable_desc": "Tampilkan opsi bantuan penulisan saat teks dipilih",
+        "title": "Pengaturan Dasar"
+      },
+      "description": "Konfigurasikan berbagai fitur bantuan penulisan",
+      "tool_config": {
+        "at_least_one_tool_error": "Setidaknya satu alat tulis harus dipilih.",
+        "list": {
+          "description": "Ubah konten menjadi daftar yang jelas dan terorganisir",
+          "title": "Daftar"
+        },
+        "proofread": {
+          "description": "Periksa kesalahan tata bahasa, ejaan dan tanda baca",
+          "title": "Koreksi"
+        },
+        "rewrite": {
+          "description": "Tingkatkan kejelasan dan alur teks",
+          "title": "Tulis ulang"
+        },
+        "sparkle": {
+          "description": "Tambahkan emoji dan elemen visual",
+          "title": "Percantik"
+        },
+        "title": "Konfigurasi Alat"
+      }
+    },
+    "chat": {
+      "title": "Obrolan",
+      "description": "Konfigurasi fungsionalitas chat dan tindakan cepat",
+      "basic_config": {
+        "title": "Konfigurasi Dasar",
+        "chat_model": "Model chat",
+        "chat_model_description": "Pilih model AI untuk percakapan chat",
+        "chat_system_prompt": "Sistem Prompt Obrolan",
+        "chat_system_prompt_description": "Tentukan perilaku dan peran AI selama percakapan chat",
+        "thinking_visibility": "Visibilitas Proses Berpikir",
+        "thinking_visibility_description": "Pilih cara proses berpikir ditampilkan selama penalaran LLM",
+        "thinking_visibility_hide": "Sembunyikan Pemikiran",
+        "thinking_visibility_hide_description": "Hanya tampilkan loading dan jawaban akhir",
+        "thinking_visibility_preview": "Pratinjau Pemikiran",
+        "thinking_visibility_preview_description": "Tampilkan 2 baris terakhir, dapat diperluas",
+        "thinking_visibility_full": "Tampilkan Pemikiran Lengkap",
+        "thinking_visibility_full_description": "Tampilkan semua secara default, dapat diciutkan"
+      },
+      "quick_actions": {
+        "title": "Tindakan Cepat",
+        "reset_to_default": "Atur Ulang ke Default",
+        "reset_to_default_confirm": "Apakah Anda yakin ingin mengatur ulang Tindakan Cepat ke nilai default?"
+      }
+    },
+    "common": {
+      "saved": "Tersimpan"
+    },
+    "interface": {
+      "title": "Antarmuka",
+      "interface_language": "Bahasa Antarmuka",
+      "theme": "Tema",
+      "theme_light": "Terang",
+      "theme_dark": "Gelap",
+      "theme_system": "Sistem"
+    },
+    "header": {
+      "starts_on_github": "Bintang di GitHub",
+      "goto_website": "Kunjungi Situs Web"
+    },
+    "providers": {
+      "lm_studio": {
+        "title": "Konfigurasi LM Studio",
+        "already_installed": "Sudah menginstal dan menjalankan LM Studio?",
+        "model_management_desc": "Unduhan, pemuatan, dan penghapusan model harus dilakukan di aplikasi desktop LM Studio. Ini hanya menampilkan status yang sedang berjalan saat ini."
+      },
+      "ollama": {
+        "title": "Konfigurasi Ollama"
+      }
+    },
+    "get_lm_studio": "Dapatkan LM Studio",
+    "delete": "Hapus",
+    "lm_studio": {
+      "server_address": "Alamat Server",
+      "server_address_desc": "Endpoint API server LM Studio"
+    },
+    "webllm_desc_lm_studio": "Anda sekarang menggunakan WebLLM: qwen3:0.6b untuk percobaan cepat. Untuk dukungan model lengkap dan performa yang lebih baik, silakan instal LM Studio.",
+    "gmail_tools": {
+      "title": "Alat Gmail",
+      "description": "Konfigurasi berbagai fitur bantuan penulisan",
+      "basic_config": {
+        "title": "Pengaturan dasar",
+        "enable": "Aktifkan alat Gmail",
+        "enable_desc": "Tampilkan fitur bantuan AI langsung di dalam Gmail.",
+        "output_language": "Bahasa keluaran",
+        "output_language_desc": "Pilih bahasa default untuk email yang dihasilkan AI.",
+        "output_style": "Gaya keluaran",
+        "output_style_desc": "Pilih nada default untuk email Anda",
+        "options": {
+          "auto": "Otomatis",
+          "default": "Default"
+        }
+      },
+      "system_prompt": {
+        "title": "Prompt sistem",
+        "summarize": {
+          "title": "Ringkas",
+          "description": "Ekstrak poin-poin utama dengan cepat dari email panjang atau seluruh thread."
+        },
+        "reply": {
+          "title": "Balas",
+          "description": "Buat balasan alami secara instan berdasarkan konten email dan catatan Anda."
+        },
+        "compose": {
+          "title": "Tulis",
+          "description": "Mulai dari awal atau sempurnakan draft Anda."
+        },
+        "reset_to_default": "Reset ke default",
+        "reset_to_default_confirm": "Apakah Anda yakin ingin mengatur ulang {setting} ke nilai default?"
+      }
+    }
+  },
+  "context_menu": {
+    "quick_actions": {
+      "title": "Tindakan cepat"
+    },
+    "translation": {
+      "show_original": "Tampilkan asli",
+      "translate_page_into": "Terjemahkan halaman ini ke {language}",
+      "translate_selected_text": "Terjemahkan teks yang dipilih"
+    },
+    "add_image": {
+      "title": "Tambahkan Gambar ke Chat"
+    },
+    "settings": {
+      "title": "Pengaturan"
+    }
+  },
+  "errors": {
+    "model_not_found": "Ups! Ada yang salah. Silakan periksa koneksi Anda di pengaturan dan coba lagi.",
+    "model_request_error": "Ups! Ada yang salah. Silakan periksa koneksi Anda di pengaturan dan coba lagi.",
+    "model_request_timeout": "Waktu permintaan habis, silakan periksa koneksi Anda atau pertimbangkan untuk memulai sesi baru karena konteks yang panjang dapat mempengaruhi waktu respons.",
+    "timeout_error": "Operasi waktu habis: {message}",
+    "unknown_error": "Terjadi kesalahan yang tidak terduga: {message}",
+    "webllm_not_supported": "WebLLM tidak didukung pada perangkat Anda.",
+    "max_characters_error": "Maksimal {count} karakter diizinkan"
+  },
+  "common": {
+    "cancel": "Batal",
+    "duration": {
+      "days": "{day} hari | {day} hari",
+      "seconds": "{second} detik | {second} detik",
+      "minutes": "{minute} menit | {minute} menit",
+      "hours": "{hour} jam | {hour} jam",
+      "years": "{year} tahun | {year} tahun",
+      "months": "{month} bulan | {month} bulan"
+    },
+    "confirm": "Konfirmasi",
+    "send": "Kirim"
+  },
+  "ollama": {
+    "sites": {
+      "add_to_nativemind": "Gunakan di TechieMind"
+    }
+  },
+  "popup": {
+    "reload_page": "Silakan muat ulang halaman untuk menggunakan TechieMind.",
+    "page_not_supported": "Halaman ini tidak didukung oleh TechieMind.",
+    "local_pdf_file_not_supported": "Karena keterbatasan izin browser, kami tidak dapat mengakses file lokal di komputer Anda secara langsung. Silakan buka plugin di tab browser lain dan unggah file PDF lokal secara manual."
+  },
+  "writing_tools": {
+    "processing": "Memproses...",
+    "rewrite_suggestion": "Saran Penulisan Ulang",
+    "sparkle_text": "Percantik Teks",
+    "key_points": "Poin-Poin Utama",
+    "grammar_and_style": "Tata Bahasa & Gaya",
+    "proofread": "Koreksi",
+    "list": "Daftar",
+    "sparkle": "Percantik",
+    "rewrite": "Tulis Ulang",
+    "apply": "Terapkan",
+    "dismiss": "Abaikan"
+  },
+  "textarea": {
+    "reset_to_default": "Atur ulang ke default"
+  },
+  "tooltips": {
+    "clear_chat": "Hapus obrolan",
+    "settings": "Pengaturan",
+    "pin_sidebar": "Sematkan",
+    "unpin_sidebar": "Lepas sematan",
+    "close": "Tutup",
+    "chat_history": "Sejarah",
+    "new_chat": "Obrolan baru",
+    "back": "Kembali",
+    "copy_message": "Salin",
+    "edit_message": "Edit",
+    "retry_message": "Coba lagi"
+  },
+  "gmail_tools": {
+    "buttons": {
+      "ai_summary": "Ringkasan AI",
+      "ai_reply": "Balasan AI",
+      "ai_polish": "Poles AI"
+    },
+    "modals": {
+      "open_sidebar_title": "Perlu Membuka Sidebar",
+      "open_sidebar_description": "Silakan buka sidebar TechieMind secara manual untuk menggunakan fitur ini.",
+      "confirm": "OK",
+      "close": "Tutup"
+    },
+    "cards": {
+      "reply": {
+        "title": "Saran balasan",
+        "processing": "Memproses...",
+        "regenerate": "Generate ulang",
+        "apply": "Terapkan",
+        "language_selector": "Bahasa",
+        "style_selector": "Gaya",
+        "copy_to_clipboard": "Salin ke clipboard"
+      },
+      "compose": {
+        "title": "Tulis AI",
+        "subject": "Subjek:",
+        "email_body": "Isi email:",
+        "processing": "Memproses...",
+        "regenerate": "Generate ulang",
+        "apply": "Terapkan",
+        "language_selector": "Bahasa",
+        "style_selector": "Gaya",
+        "copy_subject_to_clipboard": "Salin subjek ke clipboard",
+        "copy_body_to_clipboard": "Salin isi ke clipboard",
+        "no_subject_generated": "Tidak ada subjek yang dihasilkan"
+      },
+      "styles": {
+        "change_style": "Ubah gaya",
+        "formal": "Formal",
+        "friendly": "Ramah",
+        "urgent": "Mendesak"
+      },
+      "notifications": {
+        "copied_to_clipboard": "Disalin ke clipboard!",
+        "subject_copied": "Subjek disalin ke clipboard!",
+        "body_copied": "Isi disalin ke clipboard!",
+        "reply_applied": "Balasan diterapkan ke kotak tulis!",
+        "email_content_applied": "Konten email diterapkan ke bidang tulis!",
+        "no_content_to_apply": "Tidak ada konten untuk diterapkan",
+        "no_compose_box_found": "Kotak tulis tidak ditemukan",
+        "failed_to_copy": "Gagal menyalin ke clipboard",
+        "failed_to_apply_reply": "Gagal menerapkan konten balasan",
+        "failed_to_apply_compose": "Gagal menerapkan konten penulisan"
+      },
+      "errors": {
+        "failed_to_summarize": "Gagal meringkas email:",
+        "failed_to_show_reply_card": "Gagal menampilkan kartu balasan Gmail:",
+        "failed_to_show_compose_card": "Gagal menampilkan kartu tulis Gmail:",
+        "failed_to_locate_reply_element": "Gagal menemukan elemen tulis balasan",
+        "error_generating_reply": "Error saat menghasilkan balasan: {error}",
+        "error_generating_compose": "Error saat menghasilkan konten penulisan: {error}"
+      }
+    }
+  }
+}

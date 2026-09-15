@@ -1,0 +1,536 @@
+{
+  "chat": {
+    "messages": {
+      "thought_for_seconds": "Pensando por {second} segundo | Pensando por {second} segundos",
+      "thinking": "Pensando...",
+      "reading": "Lendo",
+      "search_locally": "Pesquisando localmente no navegador...",
+      "used_model": "Usado {model}"
+    },
+    "quick_actions": {
+      "title": "Ações rápidas"
+    },
+    "thinking_mode": {
+      "label": "Pensando",
+      "low": "Baixo",
+      "medium": "Médio",
+      "high": "Alto"
+    },
+    "input": {
+      "placeholder": {
+        "ask_anything": "Pergunte qualquer coisa...",
+        "ask_follow_up": "Faça uma pergunta complementar..."
+      },
+      "attachment_selector": {
+        "all_tabs": "Todas as abas abertas",
+        "upload_from_computer": "Carregar do meu computador",
+        "image_oversize": "O tamanho da imagem deve ser menor que {size}",
+        "too_many_images": "Máximo de {max} arquivos de imagem permitidos",
+        "unsupported_image_type": "Formato de imagem não suportado. Por favor, carregue arquivos JPEG ou PNG.",
+        "unsupported_model": "O upload de imagem requer um modelo com capacidade de visão. Por favor, mude para Gemma3 ou modelo de visão similar.",
+        "pdf_oversize": "O tamanho do arquivo PDF deve ser menor que {size}",
+        "pdf_text_extract_error": "A extração de texto falhou - este PDF pode estar digitalizado ou ser baseado em imagem.",
+        "too_many_pdfs": "Máximo de {max} arquivo PDF permitido",
+        "pdf_page_count_exceeded": "O PDF deve ter menos de {max} páginas",
+        "only_load_partial_pages": "Apenas as primeiras {max} páginas são carregadas devido ao tamanho do arquivo",
+        "selected_text_prefix": "Texto selecionado:",
+        "captured_page_prefix": "Página capturada:"
+      }
+    },
+    "prompt": {
+      "highlight_key_insights": {
+        "title": "Destacar insights principais"
+      },
+      "search_more": {
+        "title": "Procure por mais conteúdo como este"
+      },
+      "summarize_page_content": {
+        "title": "Resumir a página"
+      }
+    },
+    "tool_calls": {
+      "common": {
+        "reading": "Lendo",
+        "read_failed": "Falha na leitura: {error}",
+        "reading_success": "Leitura concluída"
+      },
+      "search_online": {
+        "searching": "Pesquisando: \"{query}\"...",
+        "search_completed": "Pesquisa concluída: \"{query}\"",
+        "search_failed": "Busca falhou: {query}"
+      },
+      "fetch_page": {
+        "error_no_content": "nenhum conteúdo encontrado"
+      },
+      "view_image": {
+        "analyzing": "Analisando: {title}",
+        "analyze_failed": "Análise falhou: {error}",
+        "analyze_success": "Análise concluída: {title}",
+        "image_not_found": "imagem não encontrada"
+      },
+      "view_pdf": {
+        "pdf_not_found": "PDF não encontrado"
+      },
+      "view_tab": {
+        "tab_not_found": "aba não encontrada"
+      },
+      "page_click": {
+        "click": "Clique {content}",
+        "error_can_not_click": "Não foi possível clicar e ir para {destination}",
+        "error_no_active_tab": "Nenhuma aba ativa encontrada",
+        "error_unable_to_jump": "Não foi possível clicar e ir para {destination}",
+        "redirected": "Redirecionado para {destination}",
+        "error_click_before_view_tab": "Tente clicar em um link de página antes de visualizar qualquer página",
+        "error_click_incorrect_link": "Tente clicar no link da página incorreta"
+      }
+    },
+    "tools": {
+      "online_search": {
+        "title": "Pesquisar"
+      }
+    },
+    "camera": {
+      "permission_reload_title": "Recarga necessária",
+      "permission_reload_description": "Após conceder permissão, reative a extensão TechieMind no Firefox para ativar a função de captura de tela.",
+      "reload_extension": "Recarregar extensão"
+    }
+  },
+  "chat_history": {
+    "delete_confirm": "Tem certeza de que deseja excluir esta conversa? Esta ação não pode ser desfeita.",
+    "delete": "Excluir",
+    "rename": "Renomear",
+    "unpin": "Desafixar",
+    "pin": "Fixar",
+    "title": "Histórico de Conversa",
+    "pinned_section": "Chats Fixados",
+    "recent_section": "Chats Recentes",
+    "empty_state": "Ainda não há conversas",
+    "untitled_chat": "Conversa Sem Título",
+    "new_chat": "Nova Conversa",
+    "save": "Salvar",
+    "cancel": "Cancelar"
+  },
+  "onboarding": {
+    "banner": {
+      "description": "Privado e seguro, com recursos poderosos que executam inteiramente em seu dispositivo.",
+      "title": "AI no dispositivo, construído apenas para você"
+    },
+    "guide": {
+      "already_installed": "Já instalou e executou {endpointType}?",
+      "features": {
+        "1": "Execute modelos avançados como gpt-oss, DeepSeek, Qwen, Llama",
+        "2": "Personalize e alterne entre modelos com controle total",
+        "3": "Seus dados permanecem privados no seu dispositivo"
+      },
+      "follow_our_tutorial": "Siga nosso guia de instalação",
+      "install_desc": "Como você quer executar IA localmente?",
+      "need_help": "Precisa de ajuda?",
+      "setup": "Configurar",
+      "step1": "Etapa 1",
+      "download_model_to_begin": "Baixe um modelo para começar.",
+      "select_model_to_start": "Selecione e baixe um modelo para começar",
+      "download_and_install": "Baixar & Instalar",
+      "choose_model": "Escolher Modelo",
+      "no_sure_which_one": "🤔 Não tem certeza de qual escolher?",
+      "learn_about_models": "Aprenda sobre modelos",
+      "looking_for_more_options": "🔍 Procurando por mais opções?",
+      "browse_more_models": "Navegue por mais modelos",
+      "get_endpoint": "Obter {endpointType}",
+      "lm_studio_select_desc": "Aplicativo de Desktop Fácil de Usar",
+      "ollama_select_desc": "Ferramenta de Desenvolvedor Profissional",
+      "unlock_full_power_with": "Desbloqueie todo o poder da IA local com {endpointType}."
+    },
+    "webllm_tutorial": {
+      "desc": "Use um modelo leve (QWEN 0.6B) diretamente no seu navegador - sem configuração, sem espera.",
+      "not_support_webllm": "WebLLM não é suportado no seu dispositivo",
+      "start_with_webllm": "Comece com o modelo web",
+      "title": "Não está pronto para instalar? \nExperimente instantaneamente."
+    },
+    "welcome_msg": {
+      "title": "👋 Bem-vindo ao **TechieMind**",
+      "body": "O TechieMind funciona inteiramente no seu dispositivo, mantendo cada conversa privada e segura.\n\nVeja o que você pode fazer:\n- Conversar entre abas e manter o contexto enquanto navega.\n- Resumir, pesquisar e traduzir qualquer página web localmente.\n- Usar Agentes inteligentes para escrita, pesquisa ou análise profunda.\n- Carregar PDFs ou imagens para compreensão instantânea no dispositivo.\n\nVocê pode começar experimentando as ações rápidas abaixo."
+    },
+    "ollama_is_running": "Ollama está executando",
+    "backend_is_running": "{endpointType} está em execução"
+  },
+  "settings": {
+    "cache": {
+      "title": "Cache de Tradução",
+      "enable": "Ativar Cache",
+      "enabled": "Ativado",
+      "disabled": "Desativado",
+      "max_size": "Tamanho Máximo",
+      "retention_days": "Período de Retenção",
+      "days": "dias"
+    },
+    "advanced": {
+      "title": "Avançado"
+    },
+    "choose_model": "Escolher Modelo",
+    "download": "Download",
+    "feedback": {
+      "contact_msg": "📧 Dúvidas ou sugestões? Participe do nosso {discord} ou envie um email para {email}.",
+      "join_waitlist": "💼 Quer usá-lo no trabalho? {join_waitlist_link} para atualizações corporativas.",
+      "join_waitlist_link": "Junte-se à lista de espera",
+      "discord": "Discord"
+    },
+    "get_ollama": "Obter Ollama",
+    "models": {
+      "title": "Modelos",
+      "discover_more": "Descubra mais modelos",
+      "no_model": "⚠️ Nenhum modelo",
+      "add_model_to_start": "Adicionar um modelo para começar",
+      "ollama_models": "Modelos Ollama ({count})",
+      "lmstudio_models": "LM Studio Modelos ({count})"
+    },
+    "ollama": {
+      "already_installed": "Já instalou e está executando o Ollama?",
+      "connected": "Conectado",
+      "connection_error": "Erro de conexão",
+      "downloadable_model": "Modelos disponíveis para download",
+      "follow_guide": "Siga nosso guia de instalação",
+      "learn_more_about_models": "Saiba mais sobre modelos",
+      "need_help": "Precisa de ajuda?",
+      "re_scan": "Escanear novamente",
+      "server_address": "Endereço do servidor",
+      "setup": "Configurar",
+      "unconnected": "Desconectado",
+      "context_window_size": "Tamanho da janela de contexto",
+      "custom_context_window_size": "Tamanho personalizado da janela de contexto",
+      "context_window_size_desc": "Insira o tamanho personalizado da janela de contexto em tokens (mínimo: 512)",
+      "server_address_desc": "Endpoint da API do servidor Ollama",
+      "context_window_size_error": "O tamanho da janela de contexto deve ser de pelo menos {min} tokens",
+      "unload": "Descarregar",
+      "expires_in": "Expira em {duration}",
+      "running": "Executando",
+      "running_models": "Modelos em Execução",
+      "model_management": "Gestão de Modelos",
+      "downloaded_models": "Modelos Baixados"
+    },
+    "prompts": {
+      "chat_system_prompt": "Prompt de sistema do chat",
+      "title": "Prompts",
+      "translation_system_prompt": "Prompt do sistema de tradução"
+    },
+    "quick_actions": {
+      "description": "Configure ações rápidas para executar seus prompts favoritos mais rapidamente - em um novo chat ou no menu de contexto.",
+      "edit": {
+        "cancel": "Cancelar",
+        "prompt": "Prompt",
+        "reset": "Redefinir",
+        "save": "Salvar",
+        "show_in_context_menu": "Mostrar no menu de contexto",
+        "title": "Título"
+      },
+      "title": "Personalizar ações rápidas"
+    },
+    "test": "Teste",
+    "translation": {
+      "title": "Linguagem de tradução",
+      "description": "Configurar funcionalidade de tradução e idiomas de destino",
+      "basic_config": {
+        "target_language": "Idioma de destino",
+        "target_language_desc": "Selecione o idioma de destino para tradução",
+        "title": "Configuração Básica",
+        "translation_model": "Modelo de tradução",
+        "translation_model_desc": "Selecione o modelo de IA para tarefas de tradução",
+        "translation_system_prompt": "Prompt do sistema de tradução",
+        "translation_system_prompt_desc": "Definir comportamento da IA e formato de saída durante a tradução",
+        "translation_system_prompt_error": "sistema de prompt deve conter {'{{LANGUAGE}}'}"
+      }
+    },
+    "webllm-desc": "Você está agora usando WebLLM: qwen3:0.6b para teste rápido. Para suporte completo de modelos e melhor desempenho, por favor instale o Ollama.",
+    "general": {
+      "system_language": "Idioma do sistema",
+      "title": "Geral",
+      "description": "Configurar definições básicas e ligação ao servidor",
+      "discover_more_models": "Descubra Mais Modelos",
+      "refresh_status": "Atualizar Status",
+      "unload_model_confirm": "Tem certeza de que deseja descarregar o modelo \"{model}\"?",
+      "running_models": {
+        "vram": "{size} VRAM",
+        "params": "{size} parâmetros",
+        "quant": "{level} quant",
+        "thinking": "Pensando",
+        "no_active_models": "Ollama conectado, mas nenhum modelo ativo",
+        "not_connected_to_ollama": "Não conectado ao Ollama",
+        "lm_studio_no_active_models": "LM Studio conectado, mas nenhum modelo ativo",
+        "not_connected_to_lm_studio": "Não conectado ao LM Studio"
+      },
+      "delete_model_confirm": "Tem certeza de que deseja excluir o modelo \"{model}\"?"
+    },
+    "title": "Configurações",
+    "model_downloader": {
+      "description": "Este modelo precisa ser baixado antes do uso. O download pode levar alguns minutos.",
+      "downloading_model": "Baixando \"{model}\"",
+      "download_model": "Baixar \"{model}\"",
+      "downloading": "O seu modelo está sendo baixado. Por favor, aguarde…",
+      "download": "Baixar",
+      "retry": "Tentar novamente",
+      "unable_to_download": "Não foi possível iniciar o download",
+      "could_not_connect": "Não foi possível conectar ao {endpointType}. Certifique-se de que o {endpointType} está em execução e tente novamente."
+    },
+    "webllm_downloader": {
+      "description": "Para usar o modo Local, você precisa baixar o modelo {model} ({size}). Gostaria de baixá-lo agora?"
+    },
+    "writing_tools": {
+      "title": "Ferramentas de Escrita",
+      "basic_config": {
+        "enable": "Ativar Ferramentas de Escrita",
+        "enable_desc": "Mostrar opções de assistência de escrita quando o texto estiver selecionado",
+        "title": "Configurações Básicas"
+      },
+      "description": "Configure várias funcionalidades de assistência à escrita",
+      "tool_config": {
+        "at_least_one_tool_error": "Pelo menos uma ferramenta de escrita deve ser selecionada.",
+        "list": {
+          "description": "Converter conteúdo em listas claras e organizadas",
+          "title": "Lista"
+        },
+        "proofread": {
+          "description": "Verificar erros de gramática, ortografia e pontuação",
+          "title": "Revisar"
+        },
+        "rewrite": {
+          "description": "Melhorar a clareza e fluidez do texto",
+          "title": "Reescrever"
+        },
+        "sparkle": {
+          "description": "Adicione emojis e elementos visuais",
+          "title": "Embelezar"
+        },
+        "title": "Configuração de Ferramenta"
+      }
+    },
+    "chat": {
+      "title": "Conversa",
+      "description": "Configurar funcionalidade de chat e ações rápidas",
+      "basic_config": {
+        "title": "Configuração Básica",
+        "chat_model": "Modelo de chat",
+        "chat_model_description": "Selecione o modelo de IA para conversas de chat",
+        "chat_system_prompt": "Sistema de Prompt de Chat",
+        "chat_system_prompt_description": "Definir comportamento e papel da IA durante conversas de chat",
+        "thinking_visibility": "Visibilidade do Processo de Pensamento",
+        "thinking_visibility_description": "Escolha como o processo de pensamento é exibido durante o raciocínio LLM",
+        "thinking_visibility_hide": "Ocultar Pensamento",
+        "thinking_visibility_hide_description": "Mostrar apenas carregamento e resposta final",
+        "thinking_visibility_preview": "Visualizar Pensamento",
+        "thinking_visibility_preview_description": "Mostrar as últimas 2 linhas, expansível",
+        "thinking_visibility_full": "Mostrar Pensamento Completo",
+        "thinking_visibility_full_description": "Mostrar tudo por padrão, recolhível"
+      },
+      "quick_actions": {
+        "title": "Ações Rápidas",
+        "reset_to_default": "Redefinir para Padrão",
+        "reset_to_default_confirm": "Tem certeza de que deseja redefinir as Ações Rápidas para os valores padrão?"
+      }
+    },
+    "common": {
+      "saved": "Salvo"
+    },
+    "interface": {
+      "title": "Interface",
+      "interface_language": "Idioma da Interface",
+      "theme": "Tema",
+      "theme_light": "Claro",
+      "theme_dark": "Escuro",
+      "theme_system": "Sistema"
+    },
+    "header": {
+      "starts_on_github": "Estrelas no GitHub",
+      "goto_website": "Ir para o Website"
+    },
+    "providers": {
+      "lm_studio": {
+        "title": "Configurar LM Studio",
+        "already_installed": "Já instalou e executou o LM Studio?",
+        "model_management_desc": "O download, carregamento e exclusão do modelo devem ser feitos no aplicativo desktop do LM Studio. Isso mostra apenas o status de execução atual."
+      },
+      "ollama": {
+        "title": "Configurar Ollama"
+      }
+    },
+    "get_lm_studio": "Obter LM Studio",
+    "delete": "Excluir",
+    "lm_studio": {
+      "server_address": "Endereço do Servidor",
+      "server_address_desc": "endpoint da API do servidor LM Studio"
+    },
+    "webllm_desc_lm_studio": "Você está agora usando WebLLM: qwen3:0.6b para teste rápido. Para suporte completo de modelos e melhor desempenho, por favor instale o LM Studio.",
+    "gmail_tools": {
+      "title": "Ferramentas do Gmail",
+      "description": "Configurar várias funcionalidades de assistência de escrita",
+      "basic_config": {
+        "title": "Configurações básicas",
+        "enable": "Ativar ferramentas do Gmail",
+        "enable_desc": "Mostrar recursos de assistência IA diretamente no Gmail.",
+        "output_language": "Idioma de saída",
+        "output_language_desc": "Escolha o idioma padrão para e-mails gerados por IA.",
+        "output_style": "Estilo de saída",
+        "output_style_desc": "Escolha o tom padrão para seus e-mails",
+        "options": {
+          "auto": "Automático",
+          "default": "Padrão"
+        }
+      },
+      "system_prompt": {
+        "title": "Prompt do sistema",
+        "summarize": {
+          "title": "Resumir",
+          "description": "Extraia rapidamente pontos-chave de e-mails longos ou threads inteiras."
+        },
+        "reply": {
+          "title": "Responder",
+          "description": "Redija instantaneamente uma resposta natural baseada no conteúdo do e-mail e suas anotações."
+        },
+        "compose": {
+          "title": "Redigir",
+          "description": "Comece do zero ou aperfeiçoe seu rascunho."
+        },
+        "reset_to_default": "Redefinir para padrão",
+        "reset_to_default_confirm": "Tem certeza de que deseja redefinir {setting} para os valores padrão?"
+      }
+    }
+  },
+  "context_menu": {
+    "quick_actions": {
+      "title": "Ações rápidas"
+    },
+    "translation": {
+      "show_original": "Mostrar original",
+      "translate_page_into": "Traduzir esta página para {language}",
+      "translate_selected_text": "Traduzir texto selecionado"
+    },
+    "add_image": {
+      "title": "Adicionar Imagem ao Chat"
+    },
+    "settings": {
+      "title": "Configurações"
+    }
+  },
+  "errors": {
+    "model_not_found": "Ops! Algo deu errado. Por favor, verifique sua conexão nas configurações e tente novamente.",
+    "model_request_error": "Ops! Algo deu errado. Por favor, verifique sua conexão nas configurações e tente novamente.",
+    "model_request_timeout": "Tempo limite da solicitação esgotado, verifique sua conexão ou considere iniciar uma nova sessão, pois contextos longos podem afetar os tempos de resposta.",
+    "timeout_error": "Operação expirou: {message}",
+    "unknown_error": "Ocorreu um erro inesperado: {message}",
+    "webllm_not_supported": "WebLLM não é suportado no seu dispositivo.",
+    "max_characters_error": "Máximo {count} caracteres permitidos"
+  },
+  "common": {
+    "cancel": "Cancelar",
+    "duration": {
+      "days": "{day} dia | {day} dias",
+      "seconds": "{second} segundo | {second} segundos",
+      "minutes": "{minute} minuto | {minute} minutos",
+      "hours": "{hour} hora | {hour} horas",
+      "years": "{year} ano | {year} anos",
+      "months": "{month} mês | {month} meses"
+    },
+    "confirm": "Confirmar",
+    "send": "Enviar"
+  },
+  "ollama": {
+    "sites": {
+      "add_to_nativemind": "Usar no TechieMind"
+    }
+  },
+  "popup": {
+    "reload_page": "Por favor, recarregue a página para usar o TechieMind.",
+    "page_not_supported": "Esta página não é suportada pelo TechieMind.",
+    "local_pdf_file_not_supported": "Devido às limitações de permissões do navegador, não podemos acessar diretamente arquivos locais no seu computador. Por favor, abra o plugin em outra aba do navegador e faça o upload manual do arquivo PDF local."
+  },
+  "writing_tools": {
+    "processing": "Processando...",
+    "rewrite_suggestion": "Sugestão de Reescrita",
+    "sparkle_text": "Embelezar Texto",
+    "key_points": "Pontos-Chave",
+    "grammar_and_style": "Gramática e Estilo",
+    "proofread": "Revisar",
+    "list": "Lista",
+    "sparkle": "Embelezar",
+    "rewrite": "Reescrever",
+    "apply": "Aplicar",
+    "dismiss": "Dispensar"
+  },
+  "textarea": {
+    "reset_to_default": "Redefinir para padrão"
+  },
+  "tooltips": {
+    "clear_chat": "Limpar chat",
+    "settings": "Configurações",
+    "pin_sidebar": "Fixar",
+    "unpin_sidebar": "Desafixar",
+    "close": "Fechar",
+    "chat_history": "História",
+    "new_chat": "Novo bate -papo",
+    "back": "Voltar",
+    "copy_message": "Copiar mensagem",
+    "edit_message": "Editar mensagem",
+    "retry_message": "Tentar novamente"
+  },
+  "gmail_tools": {
+    "buttons": {
+      "ai_summary": "Resumo IA",
+      "ai_reply": "Resposta IA",
+      "ai_polish": "Polir com IA"
+    },
+    "modals": {
+      "open_sidebar_title": "Abertura da barra lateral necessária",
+      "open_sidebar_description": "Por favor, abra manualmente a barra lateral do TechieMind para usar este recurso.",
+      "confirm": "OK",
+      "close": "Fechar"
+    },
+    "cards": {
+      "reply": {
+        "title": "Sugestão de resposta",
+        "processing": "Processando...",
+        "regenerate": "Regenerar",
+        "apply": "Aplicar",
+        "language_selector": "Idioma",
+        "style_selector": "Estilo",
+        "copy_to_clipboard": "Copiar para área de transferência"
+      },
+      "compose": {
+        "title": "Redação IA",
+        "subject": "Assunto:",
+        "email_body": "Corpo do e-mail:",
+        "processing": "Processando...",
+        "regenerate": "Regenerar",
+        "apply": "Aplicar",
+        "language_selector": "Idioma",
+        "style_selector": "Estilo",
+        "copy_subject_to_clipboard": "Copiar assunto para área de transferência",
+        "copy_body_to_clipboard": "Copiar corpo para área de transferência",
+        "no_subject_generated": "Nenhum assunto gerado"
+      },
+      "styles": {
+        "change_style": "Mudar estilo",
+        "formal": "Formal",
+        "friendly": "Amigável",
+        "urgent": "Urgente"
+      },
+      "notifications": {
+        "copied_to_clipboard": "Copiado para área de transferência!",
+        "subject_copied": "Assunto copiado para área de transferência!",
+        "body_copied": "Corpo copiado para área de transferência!",
+        "reply_applied": "Resposta aplicada à caixa de redação!",
+        "email_content_applied": "Conteúdo do e-mail aplicado aos campos de redação!",
+        "no_content_to_apply": "Nenhum conteúdo para aplicar",
+        "no_compose_box_found": "Nenhuma caixa de redação encontrada",
+        "failed_to_copy": "Falha ao copiar para área de transferência",
+        "failed_to_apply_reply": "Falha ao aplicar conteúdo da resposta",
+        "failed_to_apply_compose": "Falha ao aplicar conteúdo de redação"
+      },
+      "errors": {
+        "failed_to_summarize": "Falha ao resumir e-mail:",
+        "failed_to_show_reply_card": "Falha ao mostrar cartão de resposta do Gmail:",
+        "failed_to_show_compose_card": "Falha ao mostrar cartão de redação do Gmail:",
+        "failed_to_locate_reply_element": "Falha ao localizar elemento de redação de resposta",
+        "error_generating_reply": "Erro ao gerar resposta: {error}",
+        "error_generating_compose": "Erro ao gerar conteúdo de redação: {error}"
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+/* Repository: https://github.com/Vikhyath-thelazycoder/TechieMind-On-device-browser-agent */
+
+@import "../../style.css";
+
+.spinner {
+  transform-origin: center;
+  animation: spinner_b 2s linear infinite;
+}
+
+.spinner circle {
+  stroke-linecap: round;
+  animation: spinner_a 1.5s ease-in-out infinite;
+}
+
+@keyframes spinner_b {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner_a {
+  0% {
+    stroke-dasharray: 0 150;
+    stroke-dashoffset: 0;
+  }
+
+  47.5% {
+    stroke-dasharray: 42 150;
+    stroke-dashoffset: -16;
+  }
+
+  95%,
+  100% {
+    stroke-dasharray: 42 150;
+    stroke-dashoffset: -59;
+  }
+}
+
+.check-mark {
+  animation: none;
+}
+
+.circle-transition {
+  stroke: var(--color-foreground-base);
+  animation: color-transition 0.6s ease-out forwards;
+}
+
+.check {
+  stroke-dasharray: 18;
+  stroke-dashoffset: -18;
+  animation: check 0.6s ease-out 0.2s forwards,
+    color-transition 0.6s ease-out forwards;
+}
+
+@keyframes check {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.markdown-viewer {
+  :deep(:not(pre)) {
+    overflow-wrap: anywhere;
+  }
+  :deep(:is(h1, h2, h3, h4, h5, h6)) {
+    font-weight: 600;
+  }
+  :deep(pre) {
+    color: var(--color-text-tertiary);
+    background-color: var(--color-bg-component);
+    margin-bottom: 8px;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+  :deep(ul) {
+    padding-left: 12px;
+    list-style: disc;
+  }
+  :deep(a) {
+    text-decoration: underline;
+  }
+  :deep(ol) {
+    padding-left: 12px;
+    list-style: disc;
+  }
+  :deep(p) {
+    line-height: 1.5;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  :deep(li) {
+    line-height: 1.5;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  :deep(hr) {
+    margin: 8px 0;
+    border-color: var(--color-border-strong);
+  }
+  :deep(strong) {
+    font-weight: 600;
+  }
+  > :deep(p) {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  > :deep(li) {
+    &:first-child,
+    &:last-child {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  > :deep(*:not(:first-child)) {
+    margin-top: 8px;
+  }
+  > :deep(*:not(:last-child)) {
+    margin-bottom: 8px;
+  }
+  :deep(*) {
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+      background-color: transparent;
+      /* or add it to the track */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--color-scroll-thumb);
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+      background-color: transparent;
+      /* or add it to the track */
+    }
+  }
+  :deep(table) {
+    td {
+      padding: 4px;
+      border: 1px solid var(--color-border-strong);
+    }
+  }
+}
